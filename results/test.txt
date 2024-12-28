@@ -1,0 +1,453 @@
+
+开始在测试集：test_2 上测试模型：FLENet_M0,测试集样本量为：390337
+[model: FLENet_M0] datasets: test_2, acc: 0.87009,Throughput-cuda:0: 16854.66 samples/sec : 100%|██████████| 1525/1525 [16:49<00:00,  1.51it/s]
+开始在测试集：test_2 上测试模型：FLENet_T0_24,测试集样本量为：390337
+[model: FLENet_T0_24] datasets: test_2, acc: 0.91810,Throughput-cuda:0: 17774.81 samples/sec : 100%|██████████| 1525/1525 [20:01<00:00,  1.27it/s]
+开始在测试集：test_2 上测试模型：FLENet_T1,测试集样本量为：390337
+[model: FLENet_T1] datasets: test_2, acc: 0.92574,Throughput-cuda:0: 18009.99 samples/sec : 100%|██████████| 1525/1525 [18:20<00:00,  1.39it/s]
+开始在测试集：test_2 上测试模型：FLENet_T2,测试集样本量为：390337
+[model: FLENet_T2] datasets: test_2, acc: 0.93713,Throughput-cuda:0: 15566.83 samples/sec : 100%|██████████| 1952/1952 [19:19<00:00,  1.68it/s]
+开始在测试集：test_2 上测试模型：ShiftViT_T0,测试集样本量为：390337
+[model: ShiftViT_T0] datasets: test_2, acc: 0.89552,Throughput-cuda:0: 19466.02 samples/sec : 100%|██████████| 1525/1525 [18:44<00:00,  1.36it/s]
+开始在测试集：test_2 上测试模型：FasterNet_T0,测试集样本量为：390337
+[model: FasterNet_T0] datasets: test_2, acc: 0.70665,Throughput-cuda:0: 20210.93 samples/sec : 100%|██████████| 1525/1525 [17:36<00:00,  1.44it/s]
+开始在测试集：test_2 上测试模型：FasterNet_CA_T0_24,测试集样本量为：390337
+[model: FasterNet_CA_T0_24] datasets: test_2, acc: 0.87570,Throughput-cuda:0: 2953.92 samples/sec : 100%|██████████| 6100/6100 [12:13<00:00,  8.32it/s]
+开始在测试集：test_2 上测试模型：MBV2_CA,测试集样本量为：390337
+[model: MBV2_CA] datasets: test_2, acc: 0.92575,Throughput-cuda:0: 2510.87 samples/sec : 100%|██████████| 6100/6100 [15:43<00:00,  6.47it/s]
+开始在测试集：test_2 上测试模型：mobilenet_v3_large,测试集样本量为：390337
+[model: mobilenet_v3_large] datasets: test_2, acc: 0.90531,Throughput-cuda:0: 9279.56 samples/sec : 100%|██████████| 1525/1525 [20:55<00:00,  1.22it/s]
+开始在测试集：test_2 上测试模型：mobilenet_v3_small,测试集样本量为：390337
+[model: mobilenet_v3_small] datasets: test_2, acc: 0.84508,Throughput-cuda:0: 17210.68 samples/sec : 100%|██████████| 1525/1525 [20:34<00:00,  1.24it/s]
+开始在测试集：test_2 上测试模型：ghostnetv2,测试集样本量为：390337
+[model: ghostnetv2] datasets: test_2, acc: 0.88903,Throughput-cuda:0: 4160.05 samples/sec : 100%|██████████| 3050/3050 [19:22<00:00,  2.62it/s]
+开始在测试集：test_2 上测试模型：EfficientViT,测试集样本量为：390337
+[model: EfficientViT] datasets: test_2, acc: 0.86621,Throughput-cuda:0: 9128.51 samples/sec : 100%|██████████| 382/382 [23:08<00:00,  3.63s/it]
+
+
+开始在测试集：test_3 上测试模型：FLENet_M0,测试集样本量为：275788
+[model: FLENet_M0] datasets: test_3, acc: 0.85796,Throughput-cuda:0: 15215.47 samples/sec : 100%|██████████| 1078/1078 [12:49<00:00,  1.40it/s]
+开始在测试集：test_3 上测试模型：FLENet_T0_24,测试集样本量为：275788
+[model: FLENet_T0_24] datasets: test_3, acc: 0.91377,Throughput-cuda:0: 15119.43 samples/sec : 100%|██████████| 1078/1078 [06:56<00:00,  2.59it/s]
+开始在测试集：test_3 上测试模型：FLENet_T1,测试集样本量为：275788
+[model: FLENet_T1] datasets: test_3, acc: 0.92134,Throughput-cuda:0: 14771.62 samples/sec : 100%|██████████| 1078/1078 [06:02<00:00,  2.98it/s]
+开始在测试集：test_3 上测试模型：FLENet_T2,测试集样本量为：275788
+[model: FLENet_T2] datasets: test_3, acc: 0.93409,Throughput-cuda:0: 12348.26 samples/sec : 100%|██████████| 1379/1379 [05:05<00:00,  4.52it/s]
+开始在测试集：test_3 上测试模型：ShiftViT_T0,测试集样本量为：275788
+[model: ShiftViT_T0] datasets: test_3, acc: 0.88313,Throughput-cuda:0: 15761.94 samples/sec : 100%|██████████| 1078/1078 [04:41<00:00,  3.83it/s]
+开始在测试集：test_3 上测试模型：FasterNet_T0,测试集样本量为：275788
+[model: FasterNet_T0] datasets: test_3, acc: 0.67104,Throughput-cuda:0: 18514.75 samples/sec : 100%|██████████| 1078/1078 [04:49<00:00,  3.72it/s]
+开始在测试集：test_3 上测试模型：FasterNet_CA_T0_24,测试集样本量为：275788
+[model: FasterNet_CA_T0_24] datasets: test_3, acc: 0.85863,Throughput-cuda:0: 2343.43 samples/sec : 100%|██████████| 4310/4310 [05:49<00:00, 12.35it/s]
+开始在测试集：test_3 上测试模型：MBV2_CA,测试集样本量为：275788
+[model: MBV2_CA] datasets: test_3, acc: 0.91761,Throughput-cuda:0: 2535.12 samples/sec : 100%|██████████| 4310/4310 [10:32<00:00,  6.82it/s]
+开始在测试集：test_3 上测试模型：mobilenet_v3_large,测试集样本量为：275788
+[model: mobilenet_v3_large] datasets: test_3, acc: 0.89234,Throughput-cuda:0: 8790.21 samples/sec : 100%|██████████| 1078/1078 [10:35<00:00,  1.70it/s]
+开始在测试集：test_3 上测试模型：mobilenet_v3_small,测试集样本量为：275788
+[model: mobilenet_v3_small] datasets: test_3, acc: 0.82372,Throughput-cuda:0: 18208.34 samples/sec : 100%|██████████| 1078/1078 [09:48<00:00,  1.83it/s]
+开始在测试集：test_3 上测试模型：ghostnetv2,测试集样本量为：275788
+[model: ghostnetv2] datasets: test_3, acc: 0.87805,Throughput-cuda:0: 3668.75 samples/sec : 100%|██████████| 2155/2155 [09:14<00:00,  3.89it/s]
+开始在测试集：test_3 上测试模型：EfficientViT,测试集样本量为：275788
+[model: EfficientViT] datasets: test_3, acc: 0.85146,Throughput-cuda:0: 9847.12 samples/sec : 100%|██████████| 270/270 [17:04<00:00,  3.80s/it]
+
+
+开始在测试集：test_4 上测试模型：FLENet_M0,测试集样本量为：214612
+[model: FLENet_M0] datasets: test_4, acc: 0.85114,Throughput-cuda:0: 18627.63 samples/sec : 100%|██████████| 839/839 [11:06<00:00,  1.26it/s]
+开始在测试集：test_4 上测试模型：FLENet_T0_24,测试集样本量为：214612
+[model: FLENet_T0_24] datasets: test_4, acc: 0.91113,Throughput-cuda:0: 18064.82 samples/sec : 100%|██████████| 839/839 [13:28<00:00,  1.04it/s]
+开始在测试集：test_4 上测试模型：FLENet_T1,测试集样本量为：214612
+[model: FLENet_T1] datasets: test_4, acc: 0.91891,Throughput-cuda:0: 18425.19 samples/sec : 100%|██████████| 839/839 [12:53<00:00,  1.08it/s]
+开始在测试集：test_4 上测试模型：FLENet_T2,测试集样本量为：214612
+[model: FLENet_T2] datasets: test_4, acc: 0.93250,Throughput-cuda:0: 15847.63 samples/sec : 100%|██████████| 1074/1074 [12:38<00:00,  1.42it/s]
+开始在测试集：test_4 上测试模型：ShiftViT_T0,测试集样本量为：214612
+[model: ShiftViT_T0] datasets: test_4, acc: 0.87632,Throughput-cuda:0: 19105.06 samples/sec : 100%|██████████| 839/839 [12:43<00:00,  1.10it/s]
+开始在测试集：test_4 上测试模型：FasterNet_T0,测试集样本量为：214612
+[model: FasterNet_T0] datasets: test_4, acc: 0.64819,Throughput-cuda:0: 21353.96 samples/sec : 100%|██████████| 839/839 [13:15<00:00,  1.05it/s]
+开始在测试集：test_4 上测试模型：FasterNet_CA_T0_24,测试集样本量为：214612
+[model: FasterNet_CA_T0_24] datasets: test_4, acc: 0.84818,Throughput-cuda:0: 3440.07 samples/sec : 100%|██████████| 3354/3354 [12:10<00:00,  4.59it/s]
+开始在测试集：test_4 上测试模型：MBV2_CA,测试集样本量为：214612
+[model: MBV2_CA] datasets: test_4, acc: 0.91396,Throughput-cuda:0: 2756.03 samples/sec : 100%|██████████| 3354/3354 [12:01<00:00,  4.65it/s]
+开始在测试集：test_4 上测试模型：mobilenet_v3_large,测试集样本量为：214612
+[model: mobilenet_v3_large] datasets: test_4, acc: 0.88653,Throughput-cuda:0: 10547.19 samples/sec : 100%|██████████| 839/839 [26:45<00:00,  1.91s/it]
+开始在测试集：test_4 上测试模型：mobilenet_v3_small,测试集样本量为：214612
+[model: mobilenet_v3_small] datasets: test_4, acc: 0.81087,Throughput-cuda:0: 17862.91 samples/sec : 100%|██████████| 839/839 [13:30<00:00,  1.04it/s]
+开始在测试集：test_4 上测试模型：ghostnetv2,测试集样本量为：214612
+[model: ghostnetv2] datasets: test_4, acc: 0.87149,Throughput-cuda:0: 4819.60 samples/sec : 100%|██████████| 1677/1677 [15:28<00:00,  1.81it/s]
+开始在测试集：test_4 上测试模型：EfficientViT,测试集样本量为：214612
+[model: EfficientViT] datasets: test_4, acc: 0.84360,Throughput-cuda:0: 10345.68 samples/sec : 100%|██████████| 210/210 [14:45<00:00,  4.22s/it]
+
+
+开始在测试集：test_5 上测试模型：FLENet_M0,测试集样本量为：177632
+[model: FLENet_M0] datasets: test_5, acc: 0.84732,Throughput-cuda:0: 12258.36 samples/sec : 100%|██████████| 694/694 [01:34<00:00,  7.32it/s]
+开始在测试集：test_5 上测试模型：FLENet_T0_24,测试集样本量为：177632
+[model: FLENet_T0_24] datasets: test_5, acc: 0.91071,Throughput-cuda:0: 14851.24 samples/sec : 100%|██████████| 694/694 [01:32<00:00,  7.47it/s]
+开始在测试集：test_5 上测试模型：FLENet_T1,测试集样本量为：177632
+[model: FLENet_T1] datasets: test_5, acc: 0.91871,Throughput-cuda:0: 16814.66 samples/sec : 100%|██████████| 694/694 [02:50<00:00,  4.07it/s]
+开始在测试集：test_5 上测试模型：FLENet_T2,测试集样本量为：177632
+[model: FLENet_T2] datasets: test_5, acc: 0.93266,Throughput-cuda:0: 14458.26 samples/sec : 100%|██████████| 889/889 [11:06<00:00,  1.33it/s]
+开始在测试集：test_5 上测试模型：ShiftViT_T0,测试集样本量为：177632
+[model: ShiftViT_T0] datasets: test_5, acc: 0.87274,Throughput-cuda:0: 17371.08 samples/sec : 100%|██████████| 694/694 [02:48<00:00,  4.12it/s]
+开始在测试集：test_5 上测试模型：FasterNet_T0,测试集样本量为：177632
+[model: FasterNet_T0] datasets: test_5, acc: 0.63883,Throughput-cuda:0: 17307.57 samples/sec : 100%|██████████| 694/694 [01:34<00:00,  7.35it/s]
+开始在测试集：test_5 上测试模型：FasterNet_CA_T0_24,测试集样本量为：177632
+[model: FasterNet_CA_T0_24] datasets: test_5, acc: 0.84392,Throughput-cuda:0: 4577.79 samples/sec : 100%|██████████| 1388/1388 [03:07<00:00,  7.40it/s]
+开始在测试集：test_5 上测试模型：MBV2_CA,测试集样本量为：177632
+[model: MBV2_CA] datasets: test_5, acc: 0.91362,Throughput-cuda:0: 4271.32 samples/sec : 100%|██████████| 1388/1388 [12:50<00:00,  1.80it/s]
+开始在测试集：test_5 上测试模型：mobilenet_v3_large,测试集样本量为：177632
+[model: mobilenet_v3_large] datasets: test_5, acc: 0.88369,Throughput-cuda:0: 8880.43 samples/sec : 100%|██████████| 694/694 [08:22<00:00,  1.38it/s]
+开始在测试集：test_5 上测试模型：mobilenet_v3_small,测试集样本量为：177632
+[model: mobilenet_v3_small] datasets: test_5, acc: 0.80454,Throughput-cuda:0: 12839.37 samples/sec : 100%|██████████| 694/694 [01:22<00:00,  8.37it/s]
+开始在测试集：test_5 上测试模型：ghostnetv2,测试集样本量为：177632
+[model: ghostnetv2] datasets: test_5, acc: 0.86831,Throughput-cuda:0: 2885.22 samples/sec : 100%|██████████| 1388/1388 [02:06<00:00, 10.96it/s]
+开始在测试集：test_5 上测试模型：EfficientViT,测试集样本量为：177632
+[model: EfficientViT] datasets: test_5, acc: 0.83893,Throughput-cuda:0: 8260.01 samples/sec : 100%|██████████| 174/174 [02:09<00:00,  1.35it/s]
+
+
+
+开始在单字体测试集：zs 上测试模型：FLENet_M0,测试集样本量为：297334
+[model: FLENet_M0] font: zs, acc: 0.82345,Throughput-cuda:0: 15251.92 samples/sec : 100%|██████████| 1162/1162 [21:37<00:00,  1.12s/it]
+开始在单字体测试集：zs 上测试模型：FLENet_T0_24,测试集样本量为：297334
+[model: FLENet_T0_24] font: zs, acc: 0.89104,Throughput-cuda:0: 13447.07 samples/sec : 100%|██████████| 1162/1162 [01:50<00:00, 10.51it/s]
+开始在单字体测试集：zs 上测试模型：FLENet_T1,测试集样本量为：297334
+[model: FLENet_T1] font: zs, acc: 0.89587,Throughput-cuda:0: 12730.40 samples/sec : 100%|██████████| 1162/1162 [01:52<00:00, 10.33it/s]
+开始在单字体测试集：zs 上测试模型：FLENet_T2,测试集样本量为：297334
+[model: FLENet_T2] font: zs, acc: 0.90747,Throughput-cuda:0: 10521.12 samples/sec : 100%|██████████| 1487/1487 [01:57<00:00, 12.69it/s]
+开始在单字体测试集：zs 上测试模型：ShiftViT_T0,测试集样本量为：297334
+[model: ShiftViT_T0] font: zs, acc: 0.88073,Throughput-cuda:0: 13526.66 samples/sec : 100%|██████████| 1162/1162 [01:54<00:00, 10.14it/s]
+开始在单字体测试集：zs 上测试模型：FasterNet_T0,测试集样本量为：297334
+[model: FasterNet_T0] font: zs, acc: 0.67965,Throughput-cuda:0: 15629.64 samples/sec : 100%|██████████| 1162/1162 [01:55<00:00, 10.10it/s]
+开始在单字体测试集：zs 上测试模型：FasterNet_CA_T0_24,测试集样本量为：297334
+[model: FasterNet_CA_T0_24] font: zs, acc: 0.85230,Throughput-cuda:0: 1997.44 samples/sec : 100%|██████████| 4646/4646 [03:32<00:00, 21.91it/s]
+开始在单字体测试集：zs 上测试模型：MBV2_CA,测试集样本量为：297334
+[model: MBV2_CA] font: zs, acc: 0.89596,Throughput-cuda:0: 1877.04 samples/sec : 100%|██████████| 4646/4646 [03:48<00:00, 20.35it/s]
+开始在单字体测试集：zs 上测试模型：mobilenet_v3_large,测试集样本量为：297334
+[model: mobilenet_v3_large] font: zs, acc: 0.88446,Throughput-cuda:0: 6258.82 samples/sec : 100%|██████████| 1162/1162 [21:08<00:00,  1.09s/it]
+开始在单字体测试集：zs 上测试模型：mobilenet_v3_small,测试集样本量为：297334
+[model: mobilenet_v3_small] font: zs, acc: 0.83591,Throughput-cuda:0: 13964.32 samples/sec : 100%|██████████| 1162/1162 [04:05<00:00,  4.74it/s]
+开始在单字体测试集：zs 上测试模型：ghostnetv2,测试集样本量为：297334
+[model: ghostnetv2] font: zs, acc: 0.83755,Throughput-cuda:0: 2428.44 samples/sec : 100%|██████████| 2323/2323 [04:11<00:00,  9.22it/s]
+开始在单字体测试集：zs 上测试模型：EfficientViT,测试集样本量为：297334
+[model: EfficientViT] font: zs, acc: 0.84878,Throughput-cuda:0: 7907.18 samples/sec : 100%|██████████| 291/291 [10:55<00:00,  2.25s/it]
+
+开始在单字体测试集：ls 上测试模型：FLENet_M0,测试集样本量为：247307
+[model: FLENet_M0] font: ls, acc: 0.87463,Throughput-cuda:0: 17499.55 samples/sec : 100%|██████████| 967/967 [22:10<00:00,  1.38s/it]
+开始在单字体测试集：ls 上测试模型：FLENet_T0_24,测试集样本量为：247307
+[model: FLENet_T0_24] font: ls, acc: 0.91588,Throughput-cuda:0: 17594.60 samples/sec : 100%|██████████| 967/967 [19:11<00:00,  1.19s/it]
+开始在单字体测试集：ls 上测试模型：FLENet_T1,测试集样本量为：247307
+[model: FLENet_T1] font: ls, acc: 0.92305,Throughput-cuda:0: 18522.79 samples/sec : 100%|██████████| 967/967 [17:42<00:00,  1.10s/it]
+开始在单字体测试集：ls 上测试模型：FLENet_T2,测试集样本量为：247307
+[model: FLENet_T2] font: ls, acc: 0.93555,Throughput-cuda:0: 16154.96 samples/sec : 100%|██████████| 1237/1237 [16:57<00:00,  1.22it/s]
+开始在单字体测试集：ls 上测试模型：ShiftViT_T0,测试集样本量为：247307
+[model: ShiftViT_T0] font: ls, acc: 0.89442,Throughput-cuda:0: 18957.59 samples/sec : 100%|██████████| 967/967 [19:58<00:00,  1.24s/it]
+开始在单字体测试集：ls 上测试模型：FasterNet_T0,测试集样本量为：247307
+[model: FasterNet_T0] font: ls, acc: 0.73481,Throughput-cuda:0: 21501.19 samples/sec : 100%|██████████| 967/967 [17:28<00:00,  1.08s/it]
+开始在单字体测试集：ls 上测试模型：FasterNet_CA_T0_24,测试集样本量为：247307
+[model: FasterNet_CA_T0_24] font: ls, acc: 0.86528,Throughput-cuda:0: 3554.81 samples/sec : 100%|██████████| 3865/3865 [16:52<00:00,  3.82it/s]
+开始在单字体测试集：ls 上测试模型：MBV2_CA,测试集样本量为：247307
+[model: MBV2_CA] font: ls, acc: 0.92552,Throughput-cuda:0: 2839.77 samples/sec : 100%|██████████| 3865/3865 [17:28<00:00,  3.69it/s]
+开始在单字体测试集：ls 上测试模型：mobilenet_v3_large,测试集样本量为：247307
+[model: mobilenet_v3_large] font: ls, acc: 0.89988,Throughput-cuda:0: 10482.31 samples/sec : 100%|██████████| 967/967 [1:36:28<00:00,  5.99s/it]
+开始在单字体测试集：ls 上测试模型：mobilenet_v3_small,测试集样本量为：247307
+[model: mobilenet_v3_small] font: ls, acc: 0.85483,Throughput-cuda:0: 17255.28 samples/sec : 100%|██████████| 967/967 [13:23<00:00,  1.20it/s]
+开始在单字体测试集：ls 上测试模型：ghostnetv2,测试集样本量为：247307
+[model: ghostnetv2] font: ls, acc: 0.89451,Throughput-cuda:0: 4700.66 samples/sec : 100%|██████████| 1933/1933 [15:54<00:00,  2.03it/s]
+开始在单字体测试集：ls 上测试模型：EfficientViT,测试集样本量为：247307
+[model: EfficientViT] font: ls, acc: 0.87737,Throughput-cuda:0: 9919.62 samples/sec : 100%|██████████| 242/242 [16:54<00:00,  4.19s/it]
+
+开始在单字体测试集：cs 上测试模型：FLENet_M0,测试集样本量为：334209
+[model: FLENet_M0] font: cs, acc: 0.78995,Throughput-cuda:0: 18543.77 samples/sec : 100%|██████████| 1306/1306 [34:39<00:00,  1.59s/it]
+开始在单字体测试集：cs 上测试模型：FLENet_T0_24,测试集样本量为：334209
+[model: FLENet_T0_24] font: cs, acc: 0.87701,Throughput-cuda:0: 18287.93 samples/sec : 100%|██████████| 1306/1306 [23:23<00:00,  1.07s/it]
+开始在单字体测试集：cs 上测试模型：FLENet_T1,测试集样本量为：334209
+[model: FLENet_T1] font: cs, acc: 0.89167,Throughput-cuda:0: 18572.87 samples/sec : 100%|██████████| 1306/1306 [22:00<00:00,  1.01s/it]
+开始在单字体测试集：cs 上测试模型：FLENet_T2,测试集样本量为：334209
+[model: FLENet_T2] font: cs, acc: 0.90807,Throughput-cuda:0: 15971.49 samples/sec : 100%|██████████| 1672/1672 [30:10<00:00,  1.08s/it]
+开始在单字体测试集：cs 上测试模型：ShiftViT_T0,测试集样本量为：334209
+[model: ShiftViT_T0] font: cs, acc: 0.83971,Throughput-cuda:0: 18861.98 samples/sec : 100%|██████████| 1306/1306 [23:14<00:00,  1.07s/it]
+开始在单字体测试集：cs 上测试模型：FasterNet_T0,测试集样本量为：334209
+[model: FasterNet_T0] font: cs, acc: 0.60524,Throughput-cuda:0: 21635.64 samples/sec : 100%|██████████| 1306/1306 [22:07<00:00,  1.02s/it]
+开始在单字体测试集：cs 上测试模型：FasterNet_CA_T0_24,测试集样本量为：334209
+[model: FasterNet_CA_T0_24] font: cs, acc: 0.82558,Throughput-cuda:0: 3569.89 samples/sec : 100%|██████████| 5223/5223 [30:31<00:00,  2.85it/s]
+开始在单字体测试集：cs 上测试模型：MBV2_CA,测试集样本量为：334209
+[model: MBV2_CA] font: cs, acc: 0.88958,Throughput-cuda:0: 2862.63 samples/sec : 100%|██████████| 5223/5223 [22:56<00:00,  3.79it/s]
+开始在单字体测试集：cs 上测试模型：mobilenet_v3_large,测试集样本量为：334209
+[model: mobilenet_v3_large] font: cs, acc: 0.86095,Throughput-cuda:0: 9980.76 samples/sec : 100%|██████████| 1306/1306 [22:25<00:00,  1.03s/it]
+开始在单字体测试集：cs 上测试模型：mobilenet_v3_small,测试集样本量为：334209
+[model: mobilenet_v3_small] font: cs, acc: 0.77143,Throughput-cuda:0: 16574.40 samples/sec : 100%|██████████| 1306/1306 [30:31<00:00,  1.40s/it]
+开始在单字体测试集：cs 上测试模型：ghostnetv2,测试集样本量为：334209
+[model: ghostnetv2] font: cs, acc: 0.83826,Throughput-cuda:0: 4808.10 samples/sec : 100%|██████████| 2612/2612 [23:17<00:00,  1.87it/s]
+开始在单字体测试集：cs 上测试模型：EfficientViT,测试集样本量为：334209
+[model: EfficientViT] font: cs, acc: 0.80907,Throughput-cuda:0: 10284.92 samples/sec : 100%|██████████| 327/327 [25:05<00:00,  4.60s/it]
+
+开始在单字体测试集：xs 上测试模型：FLENet_M0,测试集样本量为：412210
+[model: FLENet_M0] font: xs, acc: 0.90093,Throughput-cuda:0: 18269.99 samples/sec : 100%|██████████| 1611/1611 [39:02<00:00,  1.45s/it]
+开始在单字体测试集：xs 上测试模型：FLENet_T0_24,测试集样本量为：412210
+[model: FLENet_T0_24] font: xs, acc: 0.94161,Throughput-cuda:0: 18223.78 samples/sec : 100%|██████████| 1611/1611 [30:35<00:00,  1.14s/it]
+开始在单字体测试集：xs 上测试模型：FLENet_T1,测试集样本量为：412210
+[model: FLENet_T1] font: xs, acc: 0.94631,Throughput-cuda:0: 18309.08 samples/sec : 100%|██████████| 1611/1611 [33:29<00:00,  1.25s/it]
+开始在单字体测试集：xs 上测试模型：FLENet_T2,测试集样本量为：412210
+[model: FLENet_T2] font: xs, acc: 0.95673,Throughput-cuda:0: 15976.64 samples/sec : 100%|██████████| 2062/2062 [30:07<00:00,  1.14it/s]
+开始在单字体测试集：xs 上测试模型：ShiftViT_T0,测试集样本量为：412210
+[model: ShiftViT_T0] font: xs, acc: 0.91572,Throughput-cuda:0: 19433.05 samples/sec : 100%|██████████| 1611/1611 [33:42<00:00,  1.26s/it]
+开始在单字体测试集：xs 上测试模型：FasterNet_T0,测试集样本量为：412210
+[model: FasterNet_T0] font: xs, acc: 0.72276,Throughput-cuda:0: 21742.93 samples/sec : 100%|██████████| 1611/1611 [29:57<00:00,  1.12s/it]
+开始在单字体测试集：xs 上测试模型：FasterNet_CA_T0_24,测试集样本量为：412210
+[model: FasterNet_CA_T0_24] font: xs, acc: 0.88529,Throughput-cuda:0: 3580.03 samples/sec : 100%|██████████| 6441/6441 [33:02<00:00,  3.25it/s]
+开始在单字体测试集：xs 上测试模型：MBV2_CA,测试集样本量为：412210
+[model: MBV2_CA] font: xs, acc: 0.94582,Throughput-cuda:0: 2863.12 samples/sec : 100%|██████████| 6441/6441 [57:51<00:00,  1.86it/s]
+开始在单字体测试集：xs 上测试模型：mobilenet_v3_large,测试集样本量为：412210
+[model: mobilenet_v3_large] font: xs, acc: 0.92478,Throughput-cuda:0: 9334.54 samples/sec : 100%|██████████| 1611/1611 [49:06<00:00,  1.83s/it]
+开始在单字体测试集：xs 上测试模型：mobilenet_v3_small,测试集样本量为：412210
+[model: mobilenet_v3_small] font: xs, acc: 0.85369,Throughput-cuda:0: 17175.33 samples/sec : 100%|██████████| 1611/1611 [33:06<00:00,  1.23s/it]
+开始在单字体测试集：xs 上测试模型：ghostnetv2,测试集样本量为：412210
+[model: ghostnetv2] font: xs, acc: 0.91392,Throughput-cuda:0: 4843.73 samples/sec : 100%|██████████| 3221/3221 [37:50<00:00,  1.42it/s]
+开始在单字体测试集：xs 上测试模型：EfficientViT,测试集样本量为：412210
+[model: EfficientViT] font: xs, acc: 0.88077,Throughput-cuda:0: 8685.66 samples/sec : 100%|██████████| 403/403 [39:13<00:00,  5.84s/it]
+
+开始在单字体测试集：ks 上测试模型：FLENet_M0,测试集样本量为：368153
+[model: FLENet_M0] font: ks, acc: 0.93357,Throughput-cuda:0: 18287.15 samples/sec : 100%|██████████| 1439/1439 [39:34<00:00,  1.65s/it]
+开始在单字体测试集：ks 上测试模型：FLENet_T0_24,测试集样本量为：368153
+[model: FLENet_T0_24] font: ks, acc: 0.95433,Throughput-cuda:0: 18316.74 samples/sec : 100%|██████████| 1439/1439 [29:33<00:00,  1.23s/it]
+开始在单字体测试集：ks 上测试模型：FLENet_T1,测试集样本量为：368153
+[model: FLENet_T1] font: ks, acc: 0.95958,Throughput-cuda:0: 18197.18 samples/sec : 100%|██████████| 1439/1439 [32:06<00:00,  1.34s/it]
+开始在单字体测试集：ks 上测试模型：FLENet_T2,测试集样本量为：368153
+[model: FLENet_T2] font: ks, acc: 0.96793,Throughput-cuda:0: 16061.27 samples/sec : 100%|██████████| 1841/1841 [28:24<00:00,  1.08it/s]
+开始在单字体测试集：ks 上测试模型：ShiftViT_T0,测试集样本量为：368153
+[model: ShiftViT_T0] font: ks, acc: 0.93003,Throughput-cuda:0: 19068.68 samples/sec : 100%|██████████| 1439/1439 [36:39<00:00,  1.53s/it]
+开始在单字体测试集：ks 上测试模型：FasterNet_T0,测试集样本量为：368153
+[model: FasterNet_T0] font: ks, acc: 0.74953,Throughput-cuda:0: 21555.32 samples/sec : 100%|██████████| 1439/1439 [27:39<00:00,  1.15s/it]
+开始在单字体测试集：ks 上测试模型：FasterNet_CA_T0_24,测试集样本量为：368153
+[model: FasterNet_CA_T0_24] font: ks, acc: 0.92837,Throughput-cuda:0: 3571.53 samples/sec : 100%|██████████| 5753/5753 [33:58<00:00,  2.82it/s]
+开始在单字体测试集：ks 上测试模型：MBV2_CA,测试集样本量为：368153
+[model: MBV2_CA] font: ks, acc: 0.95841,Throughput-cuda:0: 2864.03 samples/sec : 100%|██████████| 5753/5753 [26:20<00:00,  3.64it/s]
+开始在单字体测试集：ks 上测试模型：mobilenet_v3_large,测试集样本量为：368153
+[model: mobilenet_v3_large] font: ks, acc: 0.93835,Throughput-cuda:0: 10217.77 samples/sec : 100%|██████████| 1439/1439 [48:47<00:00,  2.03s/it]
+开始在单字体测试集：ks 上测试模型：mobilenet_v3_small,测试集样本量为：368153
+[model: mobilenet_v3_small] font: ks, acc: 0.88571,Throughput-cuda:0: 16982.07 samples/sec : 100%|██████████| 1439/1439 [31:46<00:00,  1.32s/it]
+开始在单字体测试集：ks 上测试模型：ghostnetv2,测试集样本量为：368153
+[model: ghostnetv2] font: ks, acc: 0.93747,Throughput-cuda:0: 4807.67 samples/sec : 100%|██████████| 2877/2877 [32:09<00:00,  1.49it/s]
+开始在单字体测试集：ks 上测试模型：EfficientViT,测试集样本量为：368153
+[model: EfficientViT] font: ks, acc: 0.90065,Throughput-cuda:0: 9656.05 samples/sec : 100%|██████████| 360/360 [35:24<00:00,  5.90s/it]
+
+开始在单字体测试集：zs 上测试模型：FasterNet_T0,测试集样本量为：297334
+[model: FasterNet_T0] font: zs, acc: 0.83135,Throughput-cuda:0: 16997.89 samples/sec : 100%|██████████| 1162/1162 [24:15<00:00,  1.25s/it]
+开始在单字体测试集：ls 上测试模型：FasterNet_T0,测试集样本量为：247307
+[model: FasterNet_T0] font: ls, acc: 0.83842,Throughput-cuda:0: 21689.18 samples/sec : 100%|██████████| 967/967 [20:24<00:00,  1.27s/it]
+开始在单字体测试集：cs 上测试模型：FasterNet_T0,测试集样本量为：334209
+[model: FasterNet_T0] font: cs, acc: 0.78209,Throughput-cuda:0: 21155.22 samples/sec : 100%|██████████| 1306/1306 [38:36<00:00,  1.77s/it]
+开始在单字体测试集：xs 上测试模型：FasterNet_T0,测试集样本量为：412210
+[model: FasterNet_T0] font: xs, acc: 0.86537,Throughput-cuda:0: 20965.75 samples/sec : 100%|██████████| 1611/1611 [49:00<00:00,  1.83s/it]
+开始在单字体测试集：ks 上测试模型：FasterNet_T0,测试集样本量为：368153
+[model: FasterNet_T0] font: ks, acc: 0.87146,Throughput-cuda:0: 20828.37 samples/sec : 100%|██████████| 1439/1439 [1:08:33<00:00,  2.86s/it]
+
+
+开始在测试集：test_1 上测试模型：FasterNet_T0,测试集样本量为：600844
+[model: FasterNet_T0] datasets: test_1, acc: 0.86371,Throughput-cuda:0: 20442.18 samples/sec : 100%|██████████| 2348/2348 [29:03<00:00,  1.35it/s]
+D:\wangzhaojiang\书法真迹\test\test_2
+开始在测试集：test_2 上测试模型：FasterNet_T0,测试集样本量为：390337
+[model: FasterNet_T0] datasets: test_2, acc: 0.84083,Throughput-cuda:0: 22744.44 samples/sec : 100%|██████████| 1525/1525 [17:52<00:00,  1.42it/s]
+D:\wangzhaojiang\书法真迹\test\test_3
+开始在测试集：test_3 上测试模型：FasterNet_T0,测试集样本量为：275788
+[model: FasterNet_T0] datasets: test_3, acc: 0.82415,Throughput-cuda:0: 22592.77 samples/sec : 100%|██████████| 1078/1078 [12:28<00:00,  1.44it/s]
+D:\wangzhaojiang\书法真迹\test\test_4
+开始在测试集：test_4 上测试模型：FasterNet_T0,测试集样本量为：214612
+[model: FasterNet_T0] datasets: test_4, acc: 0.81460,Throughput-cuda:0: 22269.49 samples/sec : 100%|██████████| 839/839 [10:26<00:00,  1.34it/s]
+D:\wangzhaojiang\书法真迹\test\test_5
+开始在测试集：test_5 上测试模型：FasterNet_T0,测试集样本量为：177632
+[model: FasterNet_T0] datasets: test_5, acc: 0.81173,Throughput-cuda:0: 22793.53 samples/sec : 100%|██████████| 694/694 [07:28<00:00,  1.55it/s]
+
+
+开始在测试集：test_1 上测试模型：mobilenet_v3_small,测试集样本量为：600844
+[model: mobilenet_v3_small] datasets: test_1, acc: 0.86839,Throughput-cuda:0: 17136.87 samples/sec : 100%|██████████| 2348/2348 [26:07<00:00,  1.50it/s]
+
+
+
+
+
+
+开始在测试集：MACT testing 上测试模型：FLENet_M0,测试集样本量为：14316
+[model: FLENet_M0] datasets: MACT, acc: 0.64194,Throughput-cuda:0: 4024.77 samples/sec : 100%|██████████| 56/56 [01:03<00:00,  1.13s/it]
+开始在测试集：MACT testing 上测试模型：FLENet_T0_24,测试集样本量为：14316
+[model: FLENet_T0_24] datasets: MACT, acc: 0.78618,Throughput-cuda:0: 11453.14 samples/sec : 100%|██████████| 56/56 [00:32<00:00,  1.70it/s]
+开始在测试集：MACT testing 上测试模型：FLENet_T1,测试集样本量为：14316
+[model: FLENet_T1] datasets: MACT, acc: 0.75894,Throughput-cuda:0: 15213.65 samples/sec : 100%|██████████| 56/56 [00:34<00:00,  1.63it/s]
+开始在测试集：MACT testing 上测试模型：FLENet_T2,测试集样本量为：14316
+[model: FLENet_T2] datasets: MACT, acc: 0.79422,Throughput-cuda:0: 14306.93 samples/sec : 100%|██████████| 72/72 [00:49<00:00,  1.45it/s]
+开始在测试集：MACT testing 上测试模型：ShiftViT_T0,测试集样本量为：14316
+[model: ShiftViT_T0] datasets: MACT, acc: 0.63558,Throughput-cuda:0: 16103.91 samples/sec : 100%|██████████| 56/56 [00:33<00:00,  1.66it/s]
+开始在测试集：MACT testing 上测试模型：FasterNet_T0,测试集样本量为：14316
+[model: FasterNet_T0] datasets: MACT, acc: 0.46424,Throughput-cuda:0: 16961.33 samples/sec : 100%|██████████| 56/56 [00:33<00:00,  1.65it/s]
+开始在测试集：MACT testing 上测试模型：FasterNet_CA_T0_24,测试集样本量为：14316
+[model: FasterNet_CA_T0_24] datasets: MACT, acc: 0.62189,Throughput-cuda:0: 2893.74 samples/sec : 100%|██████████| 224/224 [00:39<00:00,  5.74it/s]
+开始在测试集：MACT testing 上测试模型：MBV2_CA,测试集样本量为：14316
+[model: MBV2_CA] datasets: MACT, acc: 0.75629,Throughput-cuda:0: 2385.61 samples/sec : 100%|██████████| 224/224 [00:39<00:00,  5.69it/s]
+开始在测试集：MACT testing 上测试模型：mobilenet_v3_large,测试集样本量为：14316
+[model: mobilenet_v3_large] datasets: MACT, acc: 0.68134,Throughput-cuda:0: 8474.40 samples/sec : 100%|██████████| 56/56 [00:44<00:00,  1.27it/s]
+开始在测试集：MACT testing 上测试模型：mobilenet_v3_small,测试集样本量为：14316
+[model: mobilenet_v3_small] datasets: MACT, acc: 0.56370,Throughput-cuda:0: 15734.03 samples/sec : 100%|██████████| 56/56 [00:34<00:00,  1.64it/s]
+开始在测试集：MACT testing 上测试模型：ghostnetv2,测试集样本量为：14316
+[model: ghostnetv2] datasets: MACT, acc: 0.60876,Throughput-cuda:0: 2639.83 samples/sec : 100%|██████████| 112/112 [00:37<00:00,  2.97it/s]
+开始在测试集：MACT testing 上测试模型：EfficientViT,测试集样本量为：14316
+[model: EfficientViT] datasets: MACT, acc: 0.61337,Throughput-cuda:0: 7639.43 samples/sec : 100%|██████████| 14/14 [00:40<00:00,  2.88s/it]
+
+
+[model: FLENet_M0] datasets: MACT, acc: 0.78982,Throughput-cuda:0: 3841.09 samples/sec : 100%|██████████| 56/56 [00:35<00:00,  1.56it/s]
+开始在测试集：MACT testing 上测试模型：FLENet_T0_24,测试集样本量为：14316
+[model: FLENet_T0_24] datasets: MACT, acc: 0.85031,Throughput-cuda:0: 12214.28 samples/sec : 100%|██████████| 56/56 [00:33<00:00,  1.68it/s]
+开始在测试集：MACT testing 上测试模型：FLENet_T1,测试集样本量为：14316
+[model: FLENet_T1] datasets: MACT, acc: 0.83284,Throughput-cuda:0: 14504.83 samples/sec : 100%|██████████| 56/56 [00:34<00:00,  1.64it/s]
+开始在测试集：MACT testing 上测试模型：FLENet_T2,测试集样本量为：14316
+[model: FLENet_T2] datasets: MACT, acc: 0.84605,Throughput-cuda:0: 14714.36 samples/sec : 100%|██████████| 72/72 [00:36<00:00,  1.96it/s]
+开始在测试集：MACT testing 上测试模型：ShiftViT_T0,测试集样本量为：14316
+[model: ShiftViT_T0] datasets: MACT, acc: 0.84891,Throughput-cuda:0: 17105.72 samples/sec : 100%|██████████| 56/56 [00:34<00:00,  1.60it/s]
+开始在测试集：MACT testing 上测试模型：FasterNet_T0,测试集样本量为：14316
+[model: FasterNet_T0] datasets: MACT, acc: 0.71696,Throughput-cuda:0: 15246.31 samples/sec : 100%|██████████| 56/56 [00:33<00:00,  1.67it/s]
+开始在测试集：MACT testing 上测试模型：FasterNet_CA_T0_24,测试集样本量为：14316
+[model: FasterNet_CA_T0_24] datasets: MACT, acc: 0.68280,Throughput-cuda:0: 2749.66 samples/sec : 100%|██████████| 224/224 [00:38<00:00,  5.80it/s]
+开始在测试集：MACT testing 上测试模型：MBV2_CA,测试集样本量为：14316
+[model: MBV2_CA] datasets: MACT, acc: 0.82900,Throughput-cuda:0: 2509.72 samples/sec : 100%|██████████| 224/224 [00:40<00:00,  5.58it/s]
+开始在测试集：MACT testing 上测试模型：mobilenet_v3_large,测试集样本量为：14316
+[model: mobilenet_v3_large] datasets: MACT, acc: 0.78639,Throughput-cuda:0: 8475.40 samples/sec : 100%|██████████| 56/56 [00:45<00:00,  1.23it/s]
+开始在测试集：MACT testing 上测试模型：mobilenet_v3_small,测试集样本量为：14316
+[model: mobilenet_v3_small] datasets: MACT, acc: 0.84626,Throughput-cuda:0: 14327.54 samples/sec : 100%|██████████| 56/56 [00:33<00:00,  1.66it/s]
+开始在测试集：MACT testing 上测试模型：ghostnetv2,测试集样本量为：14316
+[model: ghostnetv2] datasets: MACT, acc: 0.83326,Throughput-cuda:0: 2245.32 samples/sec : 100%|██████████| 112/112 [00:37<00:00,  2.96it/s]
+开始在测试集：MACT testing 上测试模型：EfficientViT,测试集样本量为：14316
+[model: EfficientViT] datasets: MACT, acc: 0.85038,Throughput-cuda:0: 9962.34 samples/sec : 100%|██████████| 14/14 [00:39<00:00,  2.85s/it]
+
+
+开始在测试集：test_1 上测试模型：shufflenet_v2_x1_0,测试集样本量为：600840
+[model: shufflenet_v2_x1_0] datasets: test_1, acc: 0.87463,Throughput-cuda:0: 3125.58 samples/sec : 100%|██████████| 9389/9389 [06:23<00:00, 24.48it/s]
+开始在测试集：test_1 上测试模型：shufflenet_v2_x1_5,测试集样本量为：600840
+[model: shufflenet_v2_x1_5] datasets: test_1, acc: 0.89785,Throughput-cuda:0: 2911.08 samples/sec : 100%|██████████| 9389/9389 [06:10<00:00, 25.35it/s]
+开始在测试集：test_1 上测试模型：mobilenet_v2_1.0x,测试集样本量为：600840
+[model: mobilenet_v2_1.0x] datasets: test_1, acc: 0.89634,Throughput-cuda:0: 3569.91 samples/sec : 100%|██████████| 9389/9389 [07:13<00:00, 21.68it/s]
+
+开始在测试集：test_2 上测试模型：shufflenet_v2_x1_0,测试集样本量为：390337
+[model: shufflenet_v2_x1_0] datasets: test_2, acc: 0.85193,Throughput-cuda:0: 4666.52 samples/sec : 100%|██████████| 6100/6100 [16:19<00:00,  6.23it/s]
+开始在测试集：test_2 上测试模型：shufflenet_v2_x1_5,测试集样本量为：390337
+[model: shufflenet_v2_x1_5] datasets: test_2, acc: 0.88142,Throughput-cuda:0: 2843.69 samples/sec : 100%|██████████| 6100/6100 [03:58<00:00, 25.60it/s]
+D:\wangzhaojiang\书法真迹\test\test_3
+开始在测试集：test_3 上测试模型：shufflenet_v2_x1_0,测试集样本量为：275788
+[model: shufflenet_v2_x1_0] datasets: test_3, acc: 0.83050,Throughput-cuda:0: 4765.24 samples/sec : 100%|██████████| 4310/4310 [12:39<00:00,  5.68it/s]
+开始在测试集：test_3 上测试模型：shufflenet_v2_x1_5,测试集样本量为：275788
+[model: shufflenet_v2_x1_5] datasets: test_3, acc: 0.86792,Throughput-cuda:0: 2862.08 samples/sec : 100%|██████████| 4310/4310 [02:57<00:00, 24.26it/s]
+D:\wangzhaojiang\书法真迹\test\test_4
+开始在测试集：test_4 上测试模型：shufflenet_v2_x1_0,测试集样本量为：214612
+[model: shufflenet_v2_x1_0] datasets: test_4, acc: 0.81732,Throughput-cuda:0: 4811.18 samples/sec : 100%|██████████| 3354/3354 [10:38<00:00,  5.25it/s]
+开始在测试集：test_4 上测试模型：shufflenet_v2_x1_5,测试集样本量为：214612
+[model: shufflenet_v2_x1_5] datasets: test_4, acc: 0.85915,Throughput-cuda:0: 2941.72 samples/sec : 100%|██████████| 3354/3354 [02:24<00:00, 23.17it/s]
+D:\wangzhaojiang\书法真迹\test\test_5
+开始在测试集：test_5 上测试模型：shufflenet_v2_x1_0,测试集样本量为：177632
+[model: shufflenet_v2_x1_0] datasets: test_5, acc: 0.81137,Throughput-cuda:0: 4802.66 samples/sec : 100%|██████████| 2776/2776 [08:34<00:00,  5.40it/s]
+开始在测试集：test_5 上测试模型：shufflenet_v2_x1_5,测试集样本量为：177632
+[model: shufflenet_v2_x1_5] datasets: test_5, acc: 0.85605,Throughput-cuda:0: 3026.44 samples/sec : 100%|██████████| 2776/2776 [02:02<00:00, 22.67it/s]
+
+开始在测试集：test_2 上测试模型：mobilenet_v2_1.0x,测试集样本量为：390337
+[model: mobilenet_v2_1.0x] datasets: test_2, acc: 0.87943,Throughput-cuda:0: 5102.53 samples/sec : 100%|██████████| 6100/6100 [16:31<00:00,  6.15it/s]
+D:\wangzhaojiang\书法真迹\test\test_3
+开始在测试集：test_3 上测试模型：mobilenet_v2_1.0x,测试集样本量为：275788
+[model: mobilenet_v2_1.0x] datasets: test_3, acc: 0.86788,Throughput-cuda:0: 5185.52 samples/sec : 100%|██████████| 4310/4310 [10:02<00:00,  7.15it/s]
+D:\wangzhaojiang\书法真迹\test\test_4
+开始在测试集：test_4 上测试模型：mobilenet_v2_1.0x,测试集样本量为：214612
+[model: mobilenet_v2_1.0x] datasets: test_4, acc: 0.86099,Throughput-cuda:0: 5298.01 samples/sec : 100%|██████████| 3354/3354 [09:16<00:00,  6.02it/s]
+D:\wangzhaojiang\书法真迹\test\test_5
+开始在测试集：test_5 上测试模型：mobilenet_v2_1.0x,测试集样本量为：177632
+[model: mobilenet_v2_1.0x] datasets: test_5, acc: 0.85791,Throughput-cuda:0: 5309.43 samples/sec : 100%|██████████| 2776/2776 [07:45<00:00,  5.96it/s]
+
+
+开始在测试集：test_1 上测试模型：FLENet_T0_all_eca,测试集样本量为：600840
+[model: FLENet_T0_all_eca] datasets: test_1, acc: 0.92514,Throughput-cuda:0: 14148.38 samples/sec : 100%|██████████| 2348/2348 [08:27<00:00,  4.62it/s]
+开始在测试集：test_1 上测试模型：FLENet_T0_no_eca,测试集样本量为：600840
+[model: FLENet_T0_no_eca] datasets: test_1, acc: 0.91965,Throughput-cuda:0: 14235.57 samples/sec : 100%|██████████| 2348/2348 [03:51<00:00, 10.13it/s]
+开始在测试集：test_1 上测试模型：FLENet_T0_local_eca,测试集样本量为：600840
+[model: FLENet_T0_local_eca] datasets: test_1, acc: 0.92559,Throughput-cuda:0: 13742.17 samples/sec : 100%|██████████| 2348/2348 [03:48<00:00, 10.27it/s]
+开始在测试集：test_1 上测试模型：FLENet_T0_global_eca,测试集样本量为：600840
+[model: FLENet_T0_global_eca] datasets: test_1, acc: 0.92156,Throughput-cuda:0: 13680.01 samples/sec : 100%|██████████| 2348/2348 [03:37<00:00, 10.78it/s]
+
+
+开始在测试集：test_1 上测试模型：FLENet_24_2284,测试集样本量为：600840
+[model: FLENet_24_2284] datasets: test_1, acc: 0.93385,Throughput-cuda:0: 11556.58 samples/sec : 100%|██████████| 2348/2348 [03:37<00:00, 10.81it/s]
+开始在测试集：test_1 上测试模型：FLENet_T0_4462,测试集样本量为：600840
+[model: FLENet_T0_4462] datasets: test_1, acc: 0.85659,Throughput-cuda:0: 13796.26 samples/sec : 100%|██████████| 2348/2348 [03:33<00:00, 10.99it/s]
+
+
+C:\Users\wzj\Desktop\ks_mobilevit\datasets\test\test_1
+开始在测试集：test_1 上测试模型：ResTL_FLENet_T0_V2,测试集样本量为：600840
+[model: ResTL_FLENet_T0_V2] datasets: test_1, acc: 0.92858,Throughput-cuda:0: 11535.62 samples/sec : 100%|██████████| 2348/2348 [04:04<00:00,  9.60it/s]
+D:\wangzhaojiang\书法真迹\test\test_2
+开始在测试集：test_2 上测试模型：ResTL_FLENet_T0_V2,测试集样本量为：390337
+[model: ResTL_FLENet_T0_V2] datasets: test_2, acc: 0.92104,Throughput-cuda:0: 15313.46 samples/sec : 100%|██████████| 1525/1525 [18:04<00:00,  1.41it/s]
+D:\wangzhaojiang\书法真迹\test\test_3
+开始在测试集：test_3 上测试模型：ResTL_FLENet_T0_V2,测试集样本量为：275788
+[model: ResTL_FLENet_T0_V2] datasets: test_3, acc: 0.91568,Throughput-cuda:0: 15310.03 samples/sec : 100%|██████████| 1078/1078 [13:48<00:00,  1.30it/s]
+D:\wangzhaojiang\书法真迹\test\test_4
+开始在测试集：test_4 上测试模型：ResTL_FLENet_T0_V2,测试集样本量为：214612
+[model: ResTL_FLENet_T0_V2] datasets: test_4, acc: 0.91400,Throughput-cuda:0: 15374.20 samples/sec : 100%|██████████| 839/839 [10:45<00:00,  1.30it/s]
+D:\wangzhaojiang\书法真迹\test\test_5
+开始在测试集：test_5 上测试模型：ResTL_FLENet_T0_V2,测试集样本量为：177632
+[model: ResTL_FLENet_T0_V2] datasets: test_5, acc: 0.91394,Throughput-cuda:0: 15424.32 samples/sec : 100%|██████████| 694/694 [07:29<00:00,  1.54it/s]
+
+
+C:\Users\wzj\Desktop\ks_mobilevit\datasets\test\test_1
+开始在测试集：test_1 上测试模型：ResTL_FLENet_T0,测试集样本量为：600840
+[model: ResTL_FLENet_T0] datasets: test_1, acc: 0.93281,Throughput-cuda:0: 11553.63 samples/sec : 100%|██████████| 2348/2348 [03:55<00:00,  9.98it/s]
+D:\wangzhaojiang\书法真迹\test\test_2
+开始在测试集：test_2 上测试模型：ResTL_FLENet_T0,测试集样本量为：390337
+[model: ResTL_FLENet_T0] datasets: test_2, acc: 0.92386,Throughput-cuda:0: 15290.54 samples/sec : 100%|██████████| 1525/1525 [18:20<00:00,  1.39it/s]
+D:\wangzhaojiang\书法真迹\test\test_3
+开始在测试集：test_3 上测试模型：ResTL_FLENet_T0,测试集样本量为：275788
+[model: ResTL_FLENet_T0] datasets: test_3, acc: 0.91766,Throughput-cuda:0: 15405.26 samples/sec : 100%|██████████| 1078/1078 [12:48<00:00,  1.40it/s]
+D:\wangzhaojiang\书法真迹\test\test_4
+开始在测试集：test_4 上测试模型：ResTL_FLENet_T0,测试集样本量为：214612
+[model: ResTL_FLENet_T0] datasets: test_4, acc: 0.91503,Throughput-cuda:0: 15344.01 samples/sec : 100%|██████████| 839/839 [10:35<00:00,  1.32it/s]
+D:\wangzhaojiang\书法真迹\test\test_5
+开始在测试集：test_5 上测试模型：ResTL_FLENet_T0,测试集样本量为：177632
+[model: ResTL_FLENet_T0] datasets: test_5, acc: 0.91365,Throughput-cuda:0: 15338.67 samples/sec : 100%|██████████| 694/694 [07:38<00:00,  1.51it/s]
+
+
+开始在单字体测试集：zs 上测试模型：ResTL_FLENet_T0,测试集样本量为：297334
+[model: ResTL_FLENet_T0] font: zs, acc: 0.89470,Throughput-cuda:0: 13402.17 samples/sec : 100%|██████████| 1162/1162 [24:08<00:00,  1.25s/it]
+开始在单字体测试集：ls 上测试模型：ResTL_FLENet_T0,测试集样本量为：247307
+[model: ResTL_FLENet_T0] font: ls, acc: 0.91432,Throughput-cuda:0: 15131.48 samples/sec : 100%|██████████| 967/967 [20:07<00:00,  1.25s/it]
+开始在单字体测试集：cs 上测试模型：ResTL_FLENet_T0,测试集样本量为：334209
+[model: ResTL_FLENet_T0] font: cs, acc: 0.89080,Throughput-cuda:0: 14992.80 samples/sec : 100%|██████████| 1306/1306 [38:23<00:00,  1.76s/it]
+开始在单字体测试集：xs 上测试模型：ResTL_FLENet_T0,测试集样本量为：412210
+[model: ResTL_FLENet_T0] font: xs, acc: 0.94647,Throughput-cuda:0: 14779.19 samples/sec : 100%|██████████| 1611/1611 [51:16<00:00,  1.91s/it]
+开始在单字体测试集：ks 上测试模型：ResTL_FLENet_T0,测试集样本量为：368153
+[model: ResTL_FLENet_T0] font: ks, acc: 0.95840,Throughput-cuda:0: 14564.47 samples/sec : 100%|██████████| 1439/1439 [1:01:23<00:00,  2.56s/it]
+开始在测试集：MACT testing 上测试模型：ResTL_FLENet_T0,测试集样本量为：14316
+[model: ResTL_FLENet_T0] datasets: MACT, acc: 0.85052,Throughput-cuda:0: 3806.72 samples/sec : 100%|██████████| 56/56 [01:11<00:00,  1.27s/it]
+
+开始在测试集：test_1 上测试模型：FLENet_32,测试集样本量为：600840
+[model: FLENet_32] datasets: test_1, acc: 0.92553,Throughput-cuda:0: 16367.12 samples/sec : 100%|██████████| 2348/2348 [10:21<00:00,  3.78it/s]
+D:\wangzhaojiang\书法真迹\test\test_2
+开始在测试集：test_2 上测试模型：FLENet_32,测试集样本量为：390337
+[model: FLENet_32] datasets: test_2, acc: 0.92023,Throughput-cuda:0: 16686.35 samples/sec : 100%|██████████| 1525/1525 [18:43<00:00,  1.36it/s]
+D:\wangzhaojiang\书法真迹\test\test_3
+开始在测试集：test_3 上测试模型：FLENet_32,测试集样本量为：275788
+[model: FLENet_32] datasets: test_3, acc: 0.91660,Throughput-cuda:0: 18710.68 samples/sec : 100%|██████████| 1078/1078 [12:35<00:00,  1.43it/s]
+D:\wangzhaojiang\书法真迹\test\test_4
+开始在测试集：test_4 上测试模型：FLENet_32,测试集样本量为：214612
+[model: FLENet_32] datasets: test_4, acc: 0.91532,Throughput-cuda:0: 18510.07 samples/sec : 100%|██████████| 839/839 [10:38<00:00,  1.31it/s]
+D:\wangzhaojiang\书法真迹\test\test_5
+开始在测试集：test_5 上测试模型：FLENet_32,测试集样本量为：177632
+[model: FLENet_32] datasets: test_5, acc: 0.91596,Throughput-cuda:0: 18611.38 samples/sec : 100%|██████████| 694/694 [07:35<00:00,  1.52it/s]
+
+
+
+C:\Users\wzj\Desktop\ks_mobilevit\datasets\test\test_1
+开始在测试集：test_1 上测试模型：FLENet_T0_mixstyle_v2,测试集样本量为：600840
+[model: FLENet_T0_mixstyle_v2] datasets: test_1, acc: 0.92051,Throughput-cuda:0: 14057.64 samples/sec : 100%|██████████| 2348/2348 [03:39<00:00, 10.68it/s]
+D:\wangzhaojiang\书法真迹\test\test_2
+开始在测试集：test_2 上测试模型：FLENet_T0_mixstyle_v2,测试集样本量为：390337
+[model: FLENet_T0_mixstyle_v2] datasets: test_2, acc: 0.91060,Throughput-cuda:0: 18425.61 samples/sec : 100%|██████████| 1525/1525 [17:37<00:00,  1.44it/s]
+D:\wangzhaojiang\书法真迹\test\test_3
+开始在测试集：test_3 上测试模型：FLENet_T0_mixstyle_v2,测试集样本量为：275788
+[model: FLENet_T0_mixstyle_v2] datasets: test_3, acc: 0.90495,Throughput-cuda:0: 18482.67 samples/sec : 100%|██████████| 1078/1078 [12:26<00:00,  1.44it/s]
+D:\wangzhaojiang\书法真迹\test\test_4
+开始在测试集：test_4 上测试模型：FLENet_T0_mixstyle_v2,测试集样本量为：214612
+[model: FLENet_T0_mixstyle_v2] datasets: test_4, acc: 0.90092,Throughput-cuda:0: 18369.97 samples/sec : 100%|██████████| 839/839 [11:11<00:00,  1.25it/s]
+D:\wangzhaojiang\书法真迹\test\test_5
+开始在测试集：test_5 上测试模型：FLENet_T0_mixstyle_v2,测试集样本量为：177632
+[model: FLENet_T0_mixstyle_v2] datasets: test_5, acc: 0.89966,Throughput-cuda:0: 18608.96 samples/sec : 100%|██████████| 694/694 [07:41<00:00,  1.50it/s]

@@ -1,0 +1,3 @@
+# Ignore ONNX and PyTorch model files
+*.onnx
+*.pth

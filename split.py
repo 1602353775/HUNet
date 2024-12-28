@@ -386,8 +386,8 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, num_classes):
             print('WARNING: non-finite loss, ending training ', loss)
             sys.exit(1)
 
-        optimizer.step()  # 参考 https://blog.csdn.net/yangwangnndd/article/details/95622893
-        # 梯度累加则实现了batchsize的变相扩大，如果accumulation_steps为8，则batchsize '变相' 扩大了8倍，是我们这种乞丐实验室解决显存受限的一个不错的trick，使用时需要注意，学习率也要适当放大。
+        optimizer.step()  # 参考
+        # 梯度累加则实现了batchsize的变相扩大，如果accumulation_steps为8，则batchsize '变相' 扩大了8倍.
         optimizer.zero_grad()  
 
     return accu_loss.item() / (step + 1), accu_num.item() / sample_num

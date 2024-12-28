@@ -16,31 +16,31 @@ from data.sampers.EffectNumSampler import *
 from datasets_count import count_images
 
 from models.FLENet import FLENet_T0,FLENet_T1,FLENet_T2,FLENet_32
-# from models.FLENet_M0 import FLENet_M0
-# from models.FLENet_MixStyle import FLENet_T0_mixstyle
-# from models.FLENet_XR import FLENet_T0_all_eca
-# from models.FLENet_GCL import FLENet_GCL_XT,FLENet_GCL_T0,FLENet_GCL_T1
-#
-# from models.RIDE_FLENet import RIDE_FLENet_T0,RIDE_FLENet_T1,RIDE_FLENet_T2
-# from models.EA_FLENet import EA_FLENet_T0,EA_FLENet_T1,EA_FLENet_T2
-# from models.Multi_FLENet import Multi_FLENet_T0,Multi_FLENet_T1,Multi_FLENet_T2
-# from models.CNNs.fasternet import FasterNet_T0,FasterNet_T1,FasterNet_T2
-# from models.Shift.shiftvit import ShiftViT_XT,ShiftViT_T0,ShiftViT_T1,ShiftViT_T2
-#
-# from models.CNNs.ghostnetv2 import ghostnetv2
-# from models.CNNs.mbv2_ca import MBV2_CA
-# from models.CNNs.mobilenet_v3 import mobilenet_v3_small , mobilenet_v3_large
-# from models.FasterNet_CA import FasterNet_T0
-# from models.CNNs.ghostnet import ghostnet
-# from models.CNNs.densenet import densenet121
-# from models.CNNs.resnet import resnet18,resnet34,resnet50
-# from models.CNNs.shufflenetv2 import ShuffleNetV2
-# from models.CNNs.mobilenet_v2 import MobileNetV2
-# from models.CNNs.mobilenet_v3 import MobileNetV3
-# from models.CNNs.mbv2_ca import MBV2_CA
-# from models.CNNs.moganet import MogaNet
-# from models.Transformer.efficientvit.efficientvit import EfficientViT
-# from models.Hybrid.mobilevit_v1.model import mobile_vit_xx_small,mobile_vit_x_small,mobile_vit_small
+from models.FLENet_M0 import FLENet_M0
+from models.FLENet_MixStyle import FLENet_T0_mixstyle
+from models.FLENet_XR import FLENet_T0_all_eca
+from models.FLENet_GCL import FLENet_GCL_XT,FLENet_GCL_T0,FLENet_GCL_T1
+
+from models.RIDE_FLENet import RIDE_FLENet_T0,RIDE_FLENet_T1,RIDE_FLENet_T2
+from models.EA_FLENet import EA_FLENet_T0,EA_FLENet_T1,EA_FLENet_T2
+from models.Multi_FLENet import Multi_FLENet_T0,Multi_FLENet_T1,Multi_FLENet_T2
+from models.CNNs.fasternet import FasterNet_T0,FasterNet_T1,FasterNet_T2
+from models.Shift.shiftvit import ShiftViT_XT,ShiftViT_T0,ShiftViT_T1,ShiftViT_T2
+
+from models.CNNs.ghostnetv2 import ghostnetv2
+from models.CNNs.mbv2_ca import MBV2_CA
+from models.CNNs.mobilenet_v3 import mobilenet_v3_small , mobilenet_v3_large
+from models.FasterNet_CA import FasterNet_T0
+from models.CNNs.ghostnet import ghostnet
+from models.CNNs.densenet import densenet121
+from models.CNNs.resnet import resnet18,resnet34,resnet50
+from models.CNNs.shufflenetv2 import ShuffleNetV2
+from models.CNNs.mobilenet_v2 import MobileNetV2
+from models.CNNs.mobilenet_v3 import MobileNetV3
+from models.CNNs.mbv2_ca import MBV2_CA
+from models.CNNs.moganet import MogaNet
+from models.Transformer.efficientvit.efficientvit import EfficientViT
+from models.Hybrid.mobilevit_v1.model import mobile_vit_xx_small,mobile_vit_x_small,mobile_vit_small
 from models.Hybrid.efficientformer_v2 import efficientformerv2_s1
 from models.CNNs.RepViT import repvit_m1
 
@@ -176,31 +176,31 @@ def main(args):
 
     model_zoo = {
                  'RepViT_M1':repvit_m1(num_classes=args.num_classes),
-                # 'efficientformerv2_s1':efficientformerv2_s1(),
-                # 'FLENet_32':FLENet_32(num_classes=args.num_classes),
-                 # 'FLENet_24_4462': FLENet_T1(num_classes=args.num_classes),
-                 # 'FLENet_24_4484':FLENet_T0(num_classes=args.num_classes),
-                # 'FLENet_T2':FLENet_T2(num_classes=args.num_classes),
-                # 'FLENet_M0':FLENet_M0(num_classes=args.num_classes),
-                # 'mobilenet_v3_large_extra':mobilenet_v3_large(num_classes=args.num_classes),
-                # 'mobilenet_v3_small':mobilenet_v3_small(num_classes=args.num_classes),
-                # 'FLENet_T0_24':FLENet_T0(num_classes=args.num_classes),
-                # 'FLENet_T0_all_eca':FLENet_T0_all_eca(num_classes=args.num_classes),
-                # 'FLENet_T0_mixstyle_v2':FLENet_T0_mixstyle(num_classes=args.num_classes),
-                # 'FasterNet_T0':FasterNet_T0()
-                # 'FasterNet_CA_T0_24':FasterNet_T0(),
-                # 'MBV2_CA':MBV2_CA()
-                # 'ghostnetv2':ghostnetv2()
-                # 'ShiftViT_T0':ShiftViT_T0(),
-                #  'ShiftViT_XT_2': ShiftViT_XT(),
-                #  'ShiftViT_T1':ShiftViT_T1(),
-                #  'FLENet_LDAM_XT':FLENet_T0(num_classes=args.num_classes),
-                #  'FLENet_IB_XT':FLENet_T0(num_classes=args.num_classes),
-                #  'FLENet_GCL_XT_SGD':FLENet_GCL_XT(num_classes=args.num_classes),
-                #  'FLENet_GCL_XT':FLENet_GCL_XT(num_classes=args.num_classes),
-                #  'FLENet_T0_24':FLENet_T0(num_classes=args.num_classes),
-                #  'FLENet_T1':FLENet_T1(num_classes=args.num_classes),
-                #  'FLENet_T2':FLENet_T2(num_classes=args.num_classes),
+                'efficientformerv2_s1':efficientformerv2_s1(),
+                'FLENet_32':FLENet_32(num_classes=args.num_classes),
+                 'FLENet_24_4462': FLENet_T1(num_classes=args.num_classes),
+                 'FLENet_24_4484':FLENet_T0(num_classes=args.num_classes),
+                'FLENet_T2':FLENet_T2(num_classes=args.num_classes),
+                'FLENet_M0':FLENet_M0(num_classes=args.num_classes),
+                'mobilenet_v3_large_extra':mobilenet_v3_large(num_classes=args.num_classes),
+                'mobilenet_v3_small':mobilenet_v3_small(num_classes=args.num_classes),
+                'FLENet_T0_24':FLENet_T0(num_classes=args.num_classes),
+                'FLENet_T0_all_eca':FLENet_T0_all_eca(num_classes=args.num_classes),
+                'FLENet_T0_mixstyle_v2':FLENet_T0_mixstyle(num_classes=args.num_classes),
+                'FasterNet_T0':FasterNet_T0()
+                'FasterNet_CA_T0_24':FasterNet_T0(),
+                'MBV2_CA':MBV2_CA()
+                'ghostnetv2':ghostnetv2()
+                'ShiftViT_T0':ShiftViT_T0(),
+                 'ShiftViT_XT_2': ShiftViT_XT(),
+                 'ShiftViT_T1':ShiftViT_T1(),
+                 'FLENet_LDAM_XT':FLENet_T0(num_classes=args.num_classes),
+                 'FLENet_IB_XT':FLENet_T0(num_classes=args.num_classes),
+                 'FLENet_GCL_XT_SGD':FLENet_GCL_XT(num_classes=args.num_classes),
+                 'FLENet_GCL_XT':FLENet_GCL_XT(num_classes=args.num_classes),
+                 'FLENet_T0_24':FLENet_T0(num_classes=args.num_classes),
+                 'FLENet_T1':FLENet_T1(num_classes=args.num_classes),
+                 'FLENet_T2':FLENet_T2(num_classes=args.num_classes),
                  }
 
     for key, value in model_zoo.items():

@@ -221,7 +221,7 @@ if __name__ == '__main__':
     parser.add_argument('--lrf', type=float, default=0.001)
 
     # 数据集所在根目录
-    parser.add_argument('--data-path', type=str, default='/Users/wangzhaojiang/Desktop/六体文字识别/ml-cvnets-main/datasets/train'  )
+    parser.add_argument('--data-path', type=str, default='./datasets/train'  )
     parser.add_argument('--datasets_count', type=bool, default=False)
     parser.add_argument('--weights', type=str, default="", help='initial weights path')
     parser.add_argument('--checkpoint', type=str, default="./best_val_checkpoint", help='continue training from checkpoint')

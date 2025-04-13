@@ -1,0 +1,15 @@
+# Ignore ONNX and PyTorch model files
+*.pth
+*.csv
+*.xlsx
+experiments/
+CAM\output
+locustfile.py
+Greek.py
+Hieroglyph.py
+Hieroglyph.py
+Jiandu.py
+Lontar.py
+notebook.ipynb
+
+

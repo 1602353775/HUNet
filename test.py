@@ -179,3 +179,7 @@ if __name__ == '__main__':
             print(f"{os.path.basename(img_path)} 识别结果: {top_char}")
         except Exception as e:
             logger.warning(f"处理 {img_path} 失败: {str(e)}")
+
+
+git config --global user.name "1602353775"
+git config --global user.email "1602353775@qq.com"

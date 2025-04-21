@@ -63,11 +63,11 @@ python train.py
 | 参数名称 | 类型 | 默认值 | 可选值 | 描述 |
 |---------|------|--------|--------|------|
 | `--img_size` | str | "m" | ['s', 'm', 'l', 'n'] | 输入图像尺寸规格 |
-| `--num_classes` | int | 8105 | - | 分类类别总数 |
+| `--num_classes` | int | 8105 | - | 识别字符总数 |
 | `--epochs` | int | 20 | - | 训练总轮数 |
 | `--batch-size` | int | 256 | - | 每批次训练样本数 |
 | `--lr` | float | 0.001 | - | 初始学习率 |
-| `--data-path` | str | 'd:\\datasets' | - | 训练数据集根路径 |
+| `--data-path` | str | './datasets' | - | 训练数据集根路径 |
 | `--datasets_count` | flag | True | - | 是否显示数据集统计信息 |
 | `--weights` | str | "" | - | 预训练权重路径 |
 | `--checkpoint` | str | "./experiments/best_val_checkpoint/" | - | 模型检查点保存路径 |
@@ -86,3 +86,5 @@ python test.py
 ```bash
 pip install onnxruntime
 ```
+
+ONNX 模型下载：[link](https://pan.baidu.com/s/128r532vfGq4XkxrJoaKb3w?pwd=59u8)

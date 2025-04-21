@@ -169,7 +169,7 @@ if __name__ == '__main__':
         label_path=r"GF_class_indices.json"
     )
     
-    test_images = find_images("CAM\input")  # 待测试图片
+    test_images = find_images(r"C:\Users\15503\Desktop\HUNet\CAM\宝")  # 待测试图片
     logger.info(f"找到 {len(test_images)} 张测试图片")
     
     for img_path in test_images:
@@ -181,5 +181,3 @@ if __name__ == '__main__':
             logger.warning(f"处理 {img_path} 失败: {str(e)}")
 
 
-git config --global user.name "1602353775"
-git config --global user.email "1602353775@qq.com"

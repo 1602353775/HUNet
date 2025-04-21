@@ -3,7 +3,7 @@
 *.csv
 *.xlsx
 experiments/
-CAM\output
+CAM/
 locustfile.py
 Greek.py
 Hieroglyph.py

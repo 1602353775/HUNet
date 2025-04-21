@@ -237,8 +237,12 @@ def load_dataset(dataset_path):
                         for img_name in os.listdir(char_path):
                             img_path = os.path.join(char_path, img_name)
                             if os.path.isfile(img_path) and not img_name.startswith('.'):
-                                train_images.append(img_path)
-                                train_labels.append(class_indict[char_folder])
+                                try:
+                                    train_labels.append(class_indict[char_folder])
+                                    train_images.append(img_path)
+                                except KeyError:
+                                    print(f"警告: 跳过未知类别 '{char_folder}' 的图片: {img_path}")
+                                    continue
 
         # 处理测试集
         for style_folder in os.listdir(test_dir):
@@ -250,8 +254,12 @@ def load_dataset(dataset_path):
                         for img_name in os.listdir(char_path):
                             img_path = os.path.join(char_path, img_name)
                             if os.path.isfile(img_path) and not img_name.startswith('.'):
-                                test_images.append(img_path)
-                                test_labels.append(class_indict[char_folder])
+                                try:
+                                    test_labels.append(class_indict[char_folder])
+                                    test_images.append(img_path)
+                                except KeyError:
+                                    print(f"警告: 跳过未知类别 '{char_folder}' 的图片: {img_path}")
+                                    continue
 
         # 创建数据集目录并保存CSV
         os.makedirs(datasets_dir, exist_ok=True)
@@ -346,6 +354,7 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, num_classes):
         optimizer.zero_grad()  
 
     return accu_loss.item() / (step + 1), accu_num.item() / sample_num
+
 
 
 @torch.no_grad()
@@ -457,6 +466,56 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, num_classes, a
     return accu_loss.item() / (step + 1), accu_num.item() / sample_num
 
 
+def train_one_epoch_v2(model, optimizer, data_loader, device, epoch, num_classes, accumulation_steps=1):
+    model.train()
+    accu_loss = torch.zeros(1).to(device)  # 累计损失
+    accu_num = torch.zeros(1).to(device)   # 累计预测正确的样本数
+    optimizer.zero_grad()
+
+    scaler = torch.amp.GradScaler(enabled=(device.type == 'cuda'))
+    sample_num = 0
+    data_loader = tqdm(data_loader, file=sys.stdout)
+    
+    for step, data in enumerate(data_loader):
+        images, labels, paths = data
+        images = images.to(device, non_blocking=True)
+        labels = labels.to(device, non_blocking=True)
+        sample_num += images.shape[0]
+
+        # 前向传播（混合精度）
+        with torch.amp.autocast(device_type=device.type, enabled=(device.type == 'cuda')):
+            # 模型返回格式 (cos_theta, total_loss)
+            cos_theta, loss = model(images,labels)
+            loss = loss / accumulation_steps  # 梯度累积时的损失平均
+        
+        # 反向传播（自动梯度缩放）
+        scaler.scale(loss).backward()
+
+        # 梯度累积更新
+        if (step + 1) % accumulation_steps == 0 or (step + 1 == len(data_loader)):
+            scaler.step(optimizer)
+            scaler.update()
+            optimizer.zero_grad(set_to_none=True)  # 更高效的梯度清零
+
+        # 精度计算（使用detach后的cos_theta）
+        with torch.no_grad():
+            pred_classes = torch.max(cos_theta, dim=1)[1]  # 直接使用cos_theta计算预测
+            accu_num += torch.eq(pred_classes, labels).sum()
+            accu_loss += loss.detach() * accumulation_steps  # 恢复实际损失值
+
+        # 更新进度条信息
+        data_loader.desc = "[train epoch {}] loss: {:.5f}, acc: {:.5f}".format(
+            epoch,
+            accu_loss.item() / (step + 1),
+            accu_num.item() / sample_num
+        )
+
+        if not torch.isfinite(loss):
+            print('WARNING: non-finite loss, ending training ', loss)
+            sys.exit(1)
+    
+    return accu_loss.item() / (step + 1), accu_num.item() / sample_num
+
 @torch.no_grad()
 def evaluate(model, model_name, data_loader, device, epoch, excel_path, num_classes=8105, count=False):
     json_path = './GF_class_indices.json'
@@ -501,6 +560,72 @@ def evaluate(model, model_name, data_loader, device, epoch, excel_path, num_clas
             batch_wrong_pred = pred_classes[wrong_mask].cpu().numpy().tolist()
             wrong_samples.extend(zip(batch_wrong_paths, batch_wrong_true, batch_wrong_pred))
 
+        data_loader.desc = "[valid epoch {}] loss: {:.5f}, acc: {:.5f}".format(
+            epoch,
+            accu_loss.item() / (step + 1),
+            accu_num.item() / sample_num
+        )
+
+    # 批量保存错误预测
+    if count and wrong_samples:
+        save_wrong_predictions_to_excel(wrong_samples, excel_path, class_indict)
+
+    # 保存类别准确率
+    if count:
+        os.makedirs(f"./experiments/acc_count/{model_name}", exist_ok=True)
+        file_name = f'./experiments/acc_count/{model_name}/best_accuracy_results_{epoch}.xlsx'
+        write_to_xlsx(class_indict, class_correct.cpu(), class_total.cpu(), file_name)
+
+    return accu_loss.item() / (step + 1), accu_num.item() / sample_num
+
+@torch.no_grad()
+def evaluate_v2(model, model_name, data_loader, device, epoch, excel_path, num_classes=8105, count=False):
+    json_path = './GF_class_indices.json'
+    with open(json_path, "r") as f:
+        class_indict = json.load(f)
+
+    model.eval()
+    class_correct = torch.zeros(num_classes, device=device)
+    class_total = torch.zeros(num_classes, device=device)
+    accu_num = torch.zeros(1).to(device)
+    accu_loss = torch.zeros(1).to(device)
+    sample_num = 0
+    wrong_samples = [] if count else None
+    data_loader = tqdm(data_loader, file=sys.stdout)
+
+    for step, data in enumerate(data_loader):
+        images, labels, paths = data
+        images = images.to(device, non_blocking=True)
+        labels = labels.to(device, non_blocking=True)
+        sample_num += images.shape[0]
+
+        # 模型返回格式 (cos_theta, loss)
+        cos_theta, loss = model(images,labels)
+        
+        # 计算预测类别
+        pred_classes = torch.max(cos_theta, dim=1)[1]
+        correct = pred_classes == labels
+
+        # 累计指标
+        accu_num += correct.sum()
+        accu_loss += loss  # 直接使用模型计算的loss
+
+        # 类别级统计（向量化操作）
+        class_correct += torch.bincount(labels[correct], minlength=num_classes)
+        class_total += torch.bincount(labels, minlength=num_classes)
+
+        # 错误样本收集
+        if count:
+            wrong_mask = ~correct
+            batch_wrong_indices = torch.where(wrong_mask)[0].cpu()
+            
+            # 批量处理提高效率
+            wrong_samples.extend([
+                (paths[i], labels[i].item(), pred_classes[i].item())
+                for i in batch_wrong_indices
+            ])
+
+        # 更新进度条
         data_loader.desc = "[valid epoch {}] loss: {:.5f}, acc: {:.5f}".format(
             epoch,
             accu_loss.item() / (step + 1),

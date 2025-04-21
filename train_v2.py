@@ -1,5 +1,6 @@
 import os
 import gc
+import json
 import argparse
 import torch
 import torch.optim as optim
@@ -9,9 +10,10 @@ from torch.optim.lr_scheduler import CosineAnnealingLR
 
 # 自定义模块
 from my_dataset import MyDataSet
-from utils import train_one_epoch, evaluate, load_dataset
+from utils import train_one_epoch_v2, evaluate_v2, load_dataset
 from datasets_count import count_images
-from models.HUNet import HUNet_24, HUNet_32, HUNet_36, HUNet_48
+from models.HUNet_V2 import HUNet_V2
+
 
 # 常量定义
 CHECKPOINT_EXTN = "pt"
@@ -21,6 +23,11 @@ IMG_SIZES = {  # 不同尺寸配置
     "l": [256, 256],
     "n": [224, 224]
 }
+
+samples_count_path = "label_counts.json"
+with open(samples_count_path, 'r') as json_file:
+    class_count_dict = json.load(json_file)
+
 
 def setup_environment(args):
     """初始化训练环境，包括设备检测、目录创建等"""
@@ -113,14 +120,8 @@ def initialize_model(model_name, device, args):
         start_epoch - 起始epoch
         best_val_acc - 最佳验证准确率
     """
-    # 模型定义
-    model_zoo = {
-        'HUNet_24': HUNet_24(args.num_classes),
-        'HUNet_32': HUNet_32(args.num_classes),
-        'HUNet_36': HUNet_36(args.num_classes),
-        'HUNet_48': HUNet_48(args.num_classes),
-    }
-    model = model_zoo[model_name].to(device)
+  
+    model = HUNet_V2( num_classes=8105).to(device)
     
     # 初始化训练状态
     best_val_acc = 0
@@ -204,11 +205,12 @@ def initialize_model(model_name, device, args):
     
     # 加载预训练权重（当无检查点时）
     if args.weights:
-        weights_path = os.path.join(args.weights, model_name)
-        if os.path.exists(weights_path):
-            state_dict = torch.load(weights_path, map_location=device)
+        weights_dir = os.path.join(args.weights, model_name)
+        if os.path.exists(weights_dir):
+            weights_pth = os.path.join(weights_dir, 'best_val_model.pth')
+            state_dict = torch.load(weights_pth, map_location=device)
             model.load_state_dict(state_dict)
-            print(f'成功加载预训练权重: {weights_path}')
+            print(f'成功加载预训练权重: {weights_pth}')
     
     # 冻结非head层
     if args.freeze_layers:
@@ -229,9 +231,6 @@ def initialize_model(model_name, device, args):
     
     return model, optimizer, start_epoch, best_val_acc
 
-import gc
-import torch
-
 def train_model(args, device):
     """主训练流程"""
     # 数据准备
@@ -239,7 +238,7 @@ def train_model(args, device):
     train_loader, val_loader = create_data_loaders(args, input_size)
     
     # 模型集合
-    models_to_train = ['HUNet_24', 'HUNet_32', 'HUNet_36', 'HUNet_48']
+    models_to_train = ['HUNet_V2']
     
     for model_name in models_to_train:
         print(f'\n{"="*60} 训练模型 {model_name} {"="*60}')
@@ -256,7 +255,7 @@ def train_model(args, device):
         # 训练循环
         for epoch in range(start_epoch, args.epochs):
             # 训练阶段
-            train_loss, train_acc = train_one_epoch(
+            train_loss, train_acc = train_one_epoch_v2(
                 model=model,
                 optimizer=optimizer,
                 data_loader=train_loader,
@@ -269,33 +268,33 @@ def train_model(args, device):
             scheduler.step()
             
             # 评估前的清理工作
-            torch.cuda.empty_cache()  # 清理PyTorch的CUDA缓存
-            gc.collect()  # 执行Python垃圾回收
+            # torch.cuda.empty_cache()  # 清理PyTorch的CUDA缓存
+            # gc.collect()  # 执行Python垃圾回收
             
             # 验证阶段
             excel_dir = f"./experiments/val_Error statistics/{model_name}/"
             os.makedirs(excel_dir, exist_ok=True)
-            val_loss, val_acc = evaluate(
-                model=model,
-                model_name=model_name,
-                data_loader=val_loader,
-                device=device,
-                epoch=epoch,
-                excel_path=os.path.join(excel_dir, f"{epoch}.xlsx"),
-                num_classes=args.num_classes,
-                count=(best_val_acc > 0.95)  # 当准确率>90%时统计错误
-            )
+            # val_loss, val_acc = evaluate_v2(
+            #     model=model,
+            #     model_name=model_name,
+            #     data_loader=val_loader,
+            #     device=device,
+            #     epoch=epoch,
+            #     excel_path=os.path.join(excel_dir, f"{epoch}.xlsx"),
+            #     num_classes=args.num_classes,
+            #     count=(best_val_acc > 0.95)  # 当准确率>90%时统计错误
+            # )
             
             # 记录训练指标
             tb_writer.add_scalar("train_loss", train_loss, epoch)
             tb_writer.add_scalar("train_acc", train_acc, epoch)
-            tb_writer.add_scalar("val_loss", val_loss, epoch)
-            tb_writer.add_scalar("val_acc", val_acc, epoch)
+            # tb_writer.add_scalar("val_loss", val_loss, epoch)
+            # tb_writer.add_scalar("val_acc", val_acc, epoch)
             tb_writer.add_scalar("learning_rate", optimizer.param_groups[0]["lr"], epoch)
             
             # 保存最佳模型
-            if val_acc > best_val_acc:
-                best_val_acc = val_acc
+            if train_acc > best_val_acc:
+                best_val_acc = train_acc
                 save_dir = f"./experiments/weights/{model_name}/"
                 os.makedirs(save_dir, exist_ok=True)
                 
@@ -311,6 +310,8 @@ def train_model(args, device):
                     "best_metric": best_val_acc,
                     "model_name": model_name,
                 }
+               
+                os.makedirs(f"./experiments/best_val_checkpoint/{model_name}t", exist_ok=True)
                 torch.save(checkpoint, f"./experiments/best_val_checkpoint/{model_name}/best_val_checkpoint.pt")
                 
                 print(f"Epoch {epoch}: 验证准确率提升至 {best_val_acc:.2%}")
@@ -336,15 +337,15 @@ def main(args):
 
 if __name__ == '__main__':
     # 命令行参数解析
-    parser = argparse.ArgumentParser(description="HUNet训练脚本")
+    parser = argparse.ArgumentParser(description="HUNet_V2训练脚本")
     parser.add_argument('--img_size', type=str, default="m", choices=['s', 'm', 'l', 'n'])
     parser.add_argument('--num_classes', type=int, default=8105)
-    parser.add_argument('--epochs', type=int, default=40)
+    parser.add_argument('--epochs', type=int, default=20)
     parser.add_argument('--batch-size', type=int, default=256)
     parser.add_argument('--lr', type=float, default=0.001)
     parser.add_argument('--data-path', type=str, default='d:\\datasets')
     parser.add_argument('--datasets_count', action='store_true', default=True)
-    parser.add_argument('--weights', type=str, default="")
+    parser.add_argument('--weights', type=str, default=r"experiments\weights")
     parser.add_argument('--checkpoint', type=str, default="./experiments/best_val_checkpoint/")
     parser.add_argument('--freeze-layers', action='store_true')
     parser.add_argument('--device', default='cuda', help='训练设备(cuda/cpu)')

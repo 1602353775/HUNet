@@ -169,7 +169,7 @@ if __name__ == '__main__':
         label_path=r"GF_class_indices.json"
     )
     
-    test_images = find_images(r"C:\Users\15503\Desktop\HUNet\CAM\宝")  # 待测试图片
+    test_images = find_images(r"CAM\input")  # 待测试图片
     logger.info(f"找到 {len(test_images)} 张测试图片")
     
     for img_path in test_images:

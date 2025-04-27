@@ -1,6 +1,8 @@
 
 # HUNet: Hierarchical Universal Network for Multi-Type Ancient Chinese Character Recognition
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## 1. 性能对比
 
 <div style="text-align: center; margin: 20px 0;">
@@ -88,3 +90,40 @@ pip install onnxruntime
 ```
 
 ONNX 模型下载：[link](https://pan.baidu.com/s/128r532vfGq4XkxrJoaKb3w?pwd=59u8)
+
+
+## 5. Checkpoints
+
+best_val_checkpoint 下载：[link](https://pan.baidu.com/s/1SPgGAD6snK1vWuFlD3EZXA?pwd=tmdp)
+
+```python
+checkpoint = {
+    'epoch': epoch,
+    'model_state_dict': model.state_dict(),
+    'optimizer_state_dict': optimizer.state_dict(),
+    'scheduler_state_dict': scheduler.state_dict(),
+    'best_metric': val_acc,
+    'model_name': model_name,
+}
+```
+
+### Checkpoint Structure Explanation:
+| Key | Description |
+|-----|-------------|
+| `epoch` | Current training epoch number |
+| `model_state_dict` | Model's parameter dictionary |
+| `optimizer_state_dict` | Optimizer's state dictionary |
+| `scheduler_state_dict` | Learning rate scheduler's state |
+| `best_metric` | Best validation accuracy achieved |
+| `model_name` | Name/identifier of the model |
+
+### Usage Example:
+```python
+# Save checkpoint
+torch.save(checkpoint, 'model_checkpoint.pth')
+
+# Load checkpoint
+checkpoint = torch.load('model_checkpoint.pth')
+model.load_state_dict(checkpoint['model_state_dict'])
+optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+```

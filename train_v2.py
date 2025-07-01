@@ -268,33 +268,33 @@ def train_model(args, device):
             scheduler.step()
             
             # 评估前的清理工作
-            # torch.cuda.empty_cache()  # 清理PyTorch的CUDA缓存
-            # gc.collect()  # 执行Python垃圾回收
+            torch.cuda.empty_cache()  # 清理PyTorch的CUDA缓存
+            gc.collect()  # 执行Python垃圾回收
             
             # 验证阶段
             excel_dir = f"./experiments/val_Error statistics/{model_name}/"
             os.makedirs(excel_dir, exist_ok=True)
-            # val_loss, val_acc = evaluate_v2(
-            #     model=model,
-            #     model_name=model_name,
-            #     data_loader=val_loader,
-            #     device=device,
-            #     epoch=epoch,
-            #     excel_path=os.path.join(excel_dir, f"{epoch}.xlsx"),
-            #     num_classes=args.num_classes,
-            #     count=(best_val_acc > 0.95)  # 当准确率>90%时统计错误
-            # )
+            val_loss, val_acc = evaluate_v2(
+                model=model,
+                model_name=model_name,
+                data_loader=val_loader,
+                device=device,
+                epoch=epoch,
+                excel_path=os.path.join(excel_dir, f"{epoch}.xlsx"),
+                num_classes=args.num_classes,
+                count=(best_val_acc > 0.95)  # 当准确率>90%时统计错误
+            )
             
             # 记录训练指标
             tb_writer.add_scalar("train_loss", train_loss, epoch)
             tb_writer.add_scalar("train_acc", train_acc, epoch)
-            # tb_writer.add_scalar("val_loss", val_loss, epoch)
-            # tb_writer.add_scalar("val_acc", val_acc, epoch)
+            tb_writer.add_scalar("val_loss", val_loss, epoch)
+            tb_writer.add_scalar("val_acc", val_acc, epoch)
             tb_writer.add_scalar("learning_rate", optimizer.param_groups[0]["lr"], epoch)
             
             # 保存最佳模型
-            if train_acc > best_val_acc:
-                best_val_acc = train_acc
+            if val_acc > best_val_acc:
+                best_val_acc = val_acc
                 save_dir = f"./experiments/weights/{model_name}/"
                 os.makedirs(save_dir, exist_ok=True)
                 
@@ -340,7 +340,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="HUNet_V2训练脚本")
     parser.add_argument('--img_size', type=str, default="m", choices=['s', 'm', 'l', 'n'])
     parser.add_argument('--num_classes', type=int, default=8105)
-    parser.add_argument('--epochs', type=int, default=20)
+    parser.add_argument('--epochs', type=int, default=40)
     parser.add_argument('--batch-size', type=int, default=256)
     parser.add_argument('--lr', type=float, default=0.001)
     parser.add_argument('--data-path', type=str, default='d:\\datasets')

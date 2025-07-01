@@ -14,3 +14,20 @@ standalone.bat
 notebook.ipynb
 
 
+# 创建全面的忽略规则（覆盖所有不需要的文件）
+cat <<EOF > .gitignore
+# 自动生成文件
+*.yaml
+volumes/
+
+# 开发环境文件
+*.ipynb
+*.bat
+*.xlsx
+*.py
+
+# 实验数据
+experiments/
+datasets/
+CAM/
+EOF

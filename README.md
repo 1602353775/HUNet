@@ -127,3 +127,27 @@ checkpoint = torch.load('model_checkpoint.pth')
 model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 ```
+
+## 6. An application for presentations
+
+<div style="display: flex; justify-content: center; align-items: center; margin: 20px 0;">
+    <img src="assets\SCAN.jpg" alt="mini application" style="max-height: 300px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px;"/>
+    <img src="assets\APP.png" alt="scan feature" style="max-height: 300px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px;"/>
+</div>
+
+
+## 7. Citation
+
+If you find this work useful, please consider citing:
+
+```bibtex
+@article{wang2025hunet,
+  title={HUNet: Hierarchical Universal Network for Multi-Type Ancient Chinese Character Recognition},
+  author={Wang, Zhaojiang and Zhang, Chu and Lang, Qing and Jin, Lianwen and Qi, Hengnian},
+  journal={npj Heritage Science},
+  volume={13},
+  number={1},
+  pages={1--16},
+  year={2025},
+  publisher={Nature Publishing Group}
+}

@@ -3,17 +3,17 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 1. 性能对比
+## 1. Performance Comparison
 
 <div style="text-align: center; margin: 20px 0;">
     <img src="assets/Top-1.jpg" alt="性能对比图" style="max-width: 80%; height: auto; border: 1px solid #eee; border-radius: 4px;"/>
 </div>
 
 
-## 2. 数据准备
+## 2. Data Preparation
 
 
-### 数据集目录结构
+### Dataset Directory Structure
 
 ```
 datasets/
@@ -48,19 +48,19 @@ datasets/
         └── ...
 ```
 
-### 数据样本
+### Data Samples
 
 <div style="text-align: center; margin: 20px 0;">
     <img src="assets/dataset.png" alt="性能对比图" style="max-width: 80%; height: auto; border: 1px solid #eee; border-radius: 4px;"/>
 </div>
 
-## 3. HUNet模型训练
+## 3. HUNet Model Training
 
 ```bash
 python train.py
 ```
 
-## 参数列表
+## Parameter List
 
 | 参数名称 | 类型 | 默认值 | 可选值 | 描述 |
 |---------|------|--------|--------|------|
@@ -78,7 +78,7 @@ python train.py
 
 
 
-## 4. HUNet模型推理（ONNX）
+## 4. HUNet Inference (ONNX Runtime)
 
 ```bash
 python test.py
@@ -89,7 +89,7 @@ python test.py
 pip install onnxruntime
 ```
 
-ONNX 模型下载：[link](https://pan.baidu.com/s/128r532vfGq4XkxrJoaKb3w?pwd=59u8)
+Download ONNX Model：[link](https://pan.baidu.com/s/128r532vfGq4XkxrJoaKb3w?pwd=59u8)
 
 
 ## 5. Checkpoints
@@ -130,10 +130,25 @@ optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 ## 6. An application for presentations
 
-<div style="display: flex; justify-content: center; align-items: center; margin: 20px 0;">
-    <img src="assets\SCAN.jpg" alt="mini application" style="max-height: 300px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px;"/>
-    <img src="assets\APP.png" alt="scan feature" style="max-height: 300px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px;"/>
+<div style="display: flex; justify-content: center; align-items: center; margin: 20px 0; overflow-x: auto;">
+    <div style="display: inline-flex; align-items: center; min-width: fit-content;">
+        <!-- 缩小后的第一张图（250px） -->
+        <div style="display: flex; align-items: center; justify-content: center; height: 300px;">
+            <img src="assets\SCAN.jpg" alt="mini application" style="max-height: 250px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px; object-fit: contain;"/>
+        </div>
+        <!-- 原始尺寸的第二张图（300px） -->
+        <div style="display: flex; align-items: center; justify-content: center; height: 300px;">
+            <img src="assets\APP.png" alt="scan feature" style="max-height: 300px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px; object-fit: contain;"/>
+        </div>
+    </div>
 </div>
+
+### Acknowledgments
+
+We would like to express our gratitude to the following projects and resources :
+
+- [AncientGlyphNet](https://github.com/youngbbi/AncientGlyphNet) : an advanced deep learning framework for detecting ancient Chinese characters in complex scene.
+
 
 
 ## 7. Citation

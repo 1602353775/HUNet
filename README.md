@@ -1,101 +1,217 @@
 
-# HUNet: Hierarchical Universal Network for Multi-Type Ancient Chinese Character Recognition
+# 🏛️ HUNet: Hierarchical Universal Network for Multi-Type Ancient Chinese Character Recognition
+
+<div style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 15px; border-radius: 8px; margin: 20px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <div style="display: inline-block; background-color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 14px; color: #555; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+    <i class="fas fa-history" style="margin-right: 5px; color: #6c757d;"></i> 
+    <strong>Evolution Note:</strong> Previously known as <code style="background: #f8f9fa; padding: 2px 5px; border-radius: 3px; font-family: 'Courier New', monospace;">FLENet</code>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; margin: 25px 0;">
+  <div style="flex: 1; text-align: center;">
+    <div style="display: inline-block; position: relative;">
+      <span style="position: absolute; top: -15px; left: -15px; background: #ff7043; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+        NEW
+      </span>
+      <span style="font-size: 28px; font-weight: bold; color: #2c3e50; text-shadow: 1px 1px 3px rgba(0,0,0,0.1);">HUNet</span>
+    </div>
+    <div style="font-size: 16px; color: #7f8c8d; margin-top: 5px;">Current Version</div>
+  </div>
+  
+  <div style="width: 40px; text-align: center;">
+    <i class="fas fa-arrow-right" style="color: #95a5a6;"></i>
+  </div>
+  
+  <div style="flex: 1; text-align: center;">
+    <div style="opacity: 0.7;">
+      <span style="font-size: 24px; font-weight: bold; color: #95a5a6; font-family: 'Courier New', monospace;">FLENet</span>
+      <div style="font-size: 14px; color: #bdc3c7; margin-top: 5px;">Legacy Version</div>
+    </div>
+  </div>
+</div>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 1. Performance Comparison
+🌟 ​​Key Features and Core Concepts​
+
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    .enhanced-image {
+        max-width: 40%;
+        height: auto;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        filter: brightness(1.05) contrast(1.05);
+    }
+    .enhanced-image:hover {
+        transform: scale(1.02);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .tagline {
+        margin-top: 18px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: 1.2px;
+        color: #2c3e50;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .tagline-item {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        transition: transform 0.3s ease;
+    }
+    .tagline-item:hover {
+        transform: translateY(-3px);
+    }
+    .icon-fast {
+        margin-right: 8px;
+        font-size: 22px;
+        color: #FF5722; /* 活力橙 */
+    }
+    .icon-lean {
+        margin-right: 8px;
+        font-size: 22px;
+        color: #4CAF50; /* 自然绿 */
+    }
+    .icon-efficient {
+        margin-right: 8px;
+        font-size: 22px;
+        color: #2196F3; /* 科技蓝 */
+    }
+    .divider {
+        color: #bdc3c7;
+        font-weight: 300;
+    }
+</style>
 
 <div style="text-align: center; margin: 20px 0;">
-    <img src="assets/Top-1.jpg" alt="性能对比图" style="max-width: 80%; height: auto; border: 1px solid #eee; border-radius: 4px;"/>
+    <img src="assets\bee.jpg" alt="性能对比图" class="enhanced-image"/>
+    <div class="tagline">
+        <div class="tagline-item">
+            <span class="icon-fast"><i class="fas fa-bolt"></i></span>
+            <span>Fast</span>
+        </div>
+        <span class="divider">|</span>
+        <div class="tagline-item">
+            <span class="icon-lean"><i class="fas fa-leaf"></i></span>
+            <span>Lean</span>
+        </div>
+        <span class="divider">|</span>
+        <div class="tagline-item">
+            <span class="icon-efficient"><i class="fas fa-cogs"></i></span>
+            <span>Efficient</span>
+        </div>
+    </div>
 </div>
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 30px 0;"> <div style="flex: 1; min-width: 200px; text-align: center; padding: 15px;"> <i class="fas fa-layer-group" style="font-size: 32px; color: #4CAF50;"></i> <h3>Hierarchical Structure</h3> <p>Multi-level recognition for diverse ancient scripts</p> </div> <div style="flex: 1; min-width: 200px; text-align: center; padding: 15px;"> <i class="fas fa-universal-access" style="font-size: 32px; color: #2196F3;"></i> <h3>Universal Model</h3> <p>Single model handles multiple character types</p> </div> <div style="flex: 1; min-width: 200px; text-align: center; padding: 15px;"> <i class="fas fa-brain" style="font-size: 32px; color: #FF5722;"></i> <h3>Advanced Architecture</h3> <p>Innovative deep learning techniques</p> </div> </div>
+
+## 📂 Dataset Preparation
 
 
-## 2. Data Preparation
-
-
-### Dataset Directory Structure
+### 🗂 Directory Structure
 
 ```
 datasets/
-├── train/                      # 训练集目录
-│   ├── 篆书/                   # 篆书字体类别
-│   │   ├── 爱/                 # 字符"爱"的子目录  
-│   │   │   ├── 1.jpg           # 样本图像
+├── train/                      # Training set
+│   ├── 篆书/                   # Seal script
+│   │   ├── 爱/                 # Character "爱"  
+│   │   │   ├── 1.jpg           # Sample image
 │   │   │   ├── 2.jpg
-│   │   │   └── ...             # 其他样本
-│   │   ├── 书/                 # 其他字符目录
-│   │   └── ...                 # 其他字符
+│   │   │   └── ...             # Other samples
+│   │   ├── 书/                 # Other characters
+│   │   └── ...                 
 │   │
-│   ├── 隶书/                   # 隶书字体类别
+│   ├── 隶书/                   # Clerical script
 │   │   ├── 爱/
 │   │   │   ├── 1.jpg
 │   │   │   └── ...
 │   │   └── ...                 
 │   │
-│   └── ...                     # 其他字体类别（楷书/行书等）
+│   └── ...                     # Other script types
 │
-└── test/                       # 测试集目录
-    ├── test_1/                 # 测试集1
+└── test/                       # Test set
+    ├── test_1/                 # Test set 1
     │   ├── 爱/
     │   │   ├── 1.jpg
     │   │   └── ...
-    │   └── ...                 # 其他测试字符
+    │   └── ...                 
     │
-    └── test_2/                 # 测试集2
+    └── test_2/                 # Test set 2
         ├── 爱/
         │   ├── 1.jpg
         │   └── ...
         └── ...
 ```
 
-### Data Samples
+
+### 📸 Sample Images
 
 <div style="text-align: center; margin: 20px 0;">
     <img src="assets/dataset.png" alt="性能对比图" style="max-width: 80%; height: auto; border: 1px solid #eee; border-radius: 4px;"/>
 </div>
 
-## 3. HUNet Model Training
+
+
+## 🚀 Model Training
 
 ```bash
-python train.py
+python train.py \
+    --img_size "m" \
+    --num_classes 8105 \
+    --epochs 20 \
+    --batch-size 256 \
+    --lr 0.001 \
+    --data-path "./datasets" \
+    --checkpoint "./experiments/best_val_checkpoint/"
 ```
 
-## Parameter List
+## ⚙️ Training Parameters
 
-| 参数名称 | 类型 | 默认值 | 可选值 | 描述 |
-|---------|------|--------|--------|------|
-| `--img_size` | str | "m" | ['s', 'm', 'l', 'n'] | 输入图像尺寸规格 |
-| `--num_classes` | int | 8105 | - | 识别字符总数 |
-| `--epochs` | int | 20 | - | 训练总轮数 |
-| `--batch-size` | int | 256 | - | 每批次训练样本数 |
-| `--lr` | float | 0.001 | - | 初始学习率 |
-| `--data-path` | str | './datasets' | - | 训练数据集根路径 |
-| `--datasets_count` | flag | True | - | 是否显示数据集统计信息 |
-| `--weights` | str | "" | - | 预训练权重路径 |
-| `--checkpoint` | str | "./experiments/best_val_checkpoint/" | - | 模型检查点保存路径 |
-| `--freeze-layers` | flag | False | - | 是否冻结部分网络层 |
-| `--device` | str | 'cuda' | ['cuda', 'cpu'] | 训练设备选择 |
-
+| Parameter        | Type  | Default                          | Options               | Description                          |
+|------------------|-------|----------------------------------|-----------------------|--------------------------------------|
+| `--img_size`     | str   | "m"                              | ['s', 'm', 'l', 'n']  | Input image size specification       |
+| `--num_classes`  | int   | 8105                             | -                     | Total number of character classes    |
+| `--epochs`       | int   | 20                               | -                     | Total training epochs               |
+| `--batch-size`   | int   | 256                              | -                     | Number of samples per training batch |
+| `--lr`           | float | 0.001                            | -                     | Initial learning rate               |
+| `--data-path`    | str   | './datasets'                     | -                     | Root path of training dataset       |
+| `--weights`      | str   | "" (empty string)                | -                     | Path to pretrained weights          |
+| `--checkpoint`   | str   | "./experiments/best_val_checkpoint/" | -              | Path to save model checkpoints      |
+| `--freeze-layers`| flag  | False                            | -                     | Whether to freeze partial network layers |
+| `--device`       | str   | 'cuda'                           | ['cuda', 'cpu']       | Training device selection           |
 
 
-## 4. HUNet Inference (ONNX Runtime)
+## 🔍 Inference (ONNX Runtime)
 
 ```bash
 python test.py
 ```
 
-> 注：需提前安装onnxruntime
+> 💡 ​​Prerequisite​​: Install ONNX Runtime
 ```bash
 pip install onnxruntime
 ```
 
-Download ONNX Model：[link](https://pan.baidu.com/s/128r532vfGq4XkxrJoaKb3w?pwd=59u8)
+📥 Download ONNX Model：[link](https://pan.baidu.com/s/128r532vfGq4XkxrJoaKb3w?pwd=59u8)
 
 
-## 5. Checkpoints
+## 💾 Checkpoints
 
 best_val_checkpoint 下载：[link](https://pan.baidu.com/s/1SPgGAD6snK1vWuFlD3EZXA?pwd=tmdp)
 
+🏷️ Checkpoint Structure
 ```python
 checkpoint = {
     'epoch': epoch,
@@ -117,7 +233,7 @@ checkpoint = {
 | `best_metric` | Best validation accuracy achieved |
 | `model_name` | Name/identifier of the model |
 
-### Usage Example:
+### 💻 Usage Example
 ```python
 # Save checkpoint
 torch.save(checkpoint, 'model_checkpoint.pth')
@@ -128,7 +244,7 @@ model.load_state_dict(checkpoint['model_state_dict'])
 optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 ```
 
-## 6. An application for presentations
+## 📱 Demo Application
 
 <div style="display: flex; justify-content: center; align-items: center; margin: 20px 0; overflow-x: auto;">
     <div style="display: inline-flex; align-items: center; min-width: fit-content;">
@@ -143,7 +259,7 @@ optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     </div>
 </div>
 
-### Acknowledgments
+### 🙏 Acknowledgments
 
 We would like to express our gratitude to the following projects and resources :
 
@@ -151,7 +267,7 @@ We would like to express our gratitude to the following projects and resources :
 
 
 
-## 7. Citation
+## 📜 Citation
 
 If you find this work useful, please consider citing:
 
@@ -166,3 +282,6 @@ If you find this work useful, please consider citing:
   year={2025},
   publisher={Nature Publishing Group}
 }
+```
+
+<div align="center" style="margin-top: 40px;"> <p style="color: #666; font-size: 1.1em; font-style: italic;"> <i class="fas fa-monument" style="color: #8B4513;"></i> Preserving Cultural Heritage Through AI <i class="fas fa-robot" style="color: #4B9CD3;"></i> </p> </div> 

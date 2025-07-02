@@ -160,16 +160,17 @@ optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 <div style="display: flex; justify-content: center; align-items: center; margin: 20px 0; overflow-x: auto;">
     <div style="display: inline-flex; align-items: center; min-width: fit-content;">
-        <!-- 缩小后的第一张图（250px） -->
-        <div style="display: flex; align-items: center; justify-content: center; height: 300px;">
-            <img src="assets\SCAN.jpg" alt="mini application" style="max-height: 250px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px; object-fit: contain;"/>
+        <!-- First image slightly reduced (280px) -->
+        <div style="display: flex; align-items: center; justify-content: center; height: 320px;">
+            <img src="assets\SCAN.jpg" alt="mini application" style="max-height: 280px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px; object-fit: contain;"/>
         </div>
-        <!-- 原始尺寸的第二张图（300px） -->
-        <div style="display: flex; align-items: center; justify-content: center; height: 300px;">
-            <img src="assets\APP.png" alt="scan feature" style="max-height: 300px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px; object-fit: contain;"/>
+        <!-- Second image reduced to match better (280px) -->
+        <div style="display: flex; align-items: center; justify-content: center; height: 320px;">
+            <img src="assets\APP.png" alt="scan feature" style="max-height: 280px; width: auto; border: 1px solid #eee; border-radius: 4px; margin: 0 10px; object-fit: contain;"/>
         </div>
     </div>
 </div>
+
 
 ### 🙏 Acknowledgments
 

@@ -4,9 +4,10 @@
 
 <div align="center">
 
-✨ **HUNet** (Current Version) → ✨ **FLENet** (Legacy Version)  
+✨ **HUNet** (Current Version) → ✨ **FLENet** (Legacy Version)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 </div>
 
 ## 🌟 Key Features and Core Concepts
@@ -16,21 +17,22 @@
 </div>
 
 ### 🚀 Core Advantages
-| Feature | Description | Emoji |
-|---------|-------------|-------|
-| **Fast** | Optimized for high-speed recognition | ⚡ |
-| **Lean** | Minimal resource consumption | 🌿 |
-| **Efficient** | State-of-the-art accuracy | 🛠️ |
+
+| Feature             | Description                          | Emoji |
+| ------------------- | ------------------------------------ | ----- |
+| **Fast**      | Optimized for high-speed recognition | ⚡    |
+| **Lean**      | Minimal resource consumption         | 🌿    |
+| **Efficient** | State-of-the-art accuracy            | 🛠️  |
 
 ### 🔍 Key Components
-|  | Feature | Description |
-|--|---------|-------------|
+
+|      | Feature                          | Description                                         |
+| ---- | -------------------------------- | --------------------------------------------------- |
 | 🏗️ | **Hierarchical Structure** | Multi-level recognition for diverse ancient scripts |
-| 🌐 | **Universal Model** | Single model handles multiple character types |
-| 🧠 | **Advanced Architecture** | Innovative deep learning techniques |
+| 🌐   | **Universal Model**        | Single model handles multiple character types       |
+| 🧠   | **Advanced Architecture**  | Innovative deep learning techniques                 |
 
 ## 📂 Dataset Preparation
-
 
 ### 🗂 Directory Structure
 
@@ -43,13 +45,13 @@ datasets/
 │   │   │   ├── 2.jpg
 │   │   │   └── ...             # Other samples
 │   │   ├── 书/                 # Other characters
-│   │   └── ...                 
+│   │   └── ...             
 │   │
 │   ├── 隶书/                   # Clerical script
 │   │   ├── 爱/
 │   │   │   ├── 1.jpg
 │   │   │   └── ...
-│   │   └── ...                 
+│   │   └── ...             
 │   │
 │   └── ...                     # Other script types
 │
@@ -58,7 +60,7 @@ datasets/
     │   ├── 爱/
     │   │   ├── 1.jpg
     │   │   └── ...
-    │   └── ...                 
+    │   └── ...             
     │
     └── test_2/                 # Test set 2
         ├── 爱/
@@ -67,14 +69,43 @@ datasets/
         └── ...
 ```
 
-
 ### 📸 Sample Images
 
 <div style="text-align: center; margin: 20px 0;">
     <img src="assets/dataset.png" alt="性能对比图" style="max-width: 80%; height: auto; border: 1px solid #eee; border-radius: 4px;"/>
 </div>
 
+## 📋使用许可要求
 
+## 许可协议申请流程
+
+使用 **MATCCR** 数据集，研究者需要完成以下步骤：
+
+### 📄 下载使用协议
+
+下载《MTACDR数据集使用许可协议（学术研究专用版）》：datasets\MTACCR数据集使用许可协议.docx
+
+### ✍️ 填写申请信息
+
+协议中需要填写以下个人信息：
+
+- **姓名及职务/身份**
+- **所属单位**（高校/公司全称）
+- **联系方式**
+- **研究方向及代表性研究成果**
+- **研究目的和计划**
+
+### 📝 签署与提交
+
+- 申请人亲笔签名并单位加盖公章
+- 协议双面打印后签署
+- 扫描件发送至：**qihengnian@foxmail.com**
+
+## 审核与获取
+
+- **审核周期**：7个工作日内完成审核
+- **审核通过**：邮件发送数据集访问权限
+- **审核未通过**：将说明具体原因
 
 ## 🚀 Model Training
 
@@ -91,19 +122,18 @@ python train.py \
 
 ## ⚙️ Training Parameters
 
-| Parameter        | Type  | Default                          | Options               | Description                          |
-|------------------|-------|----------------------------------|-----------------------|--------------------------------------|
-| `--img_size`     | str   | "m"                              | ['s', 'm', 'l', 'n']  | Input image size specification       |
-| `--num_classes`  | int   | 8105                             | -                     | Total number of character classes    |
-| `--epochs`       | int   | 20                               | -                     | Total training epochs               |
-| `--batch-size`   | int   | 256                              | -                     | Number of samples per training batch |
-| `--lr`           | float | 0.001                            | -                     | Initial learning rate               |
-| `--data-path`    | str   | './datasets'                     | -                     | Root path of training dataset       |
-| `--weights`      | str   | "" (empty string)                | -                     | Path to pretrained weights          |
-| `--checkpoint`   | str   | "./experiments/best_val_checkpoint/" | -              | Path to save model checkpoints      |
-| `--freeze-layers`| flag  | False                            | -                     | Whether to freeze partial network layers |
-| `--device`       | str   | 'cuda'                           | ['cuda', 'cpu']       | Training device selection           |
-
+| Parameter           | Type  | Default                              | Options              | Description                              |
+| ------------------- | ----- | ------------------------------------ | -------------------- | ---------------------------------------- |
+| `--img_size`      | str   | "m"                                  | ['s', 'm', 'l', 'n'] | Input image size specification           |
+| `--num_classes`   | int   | 8105                                 | -                    | Total number of character classes        |
+| `--epochs`        | int   | 20                                   | -                    | Total training epochs                    |
+| `--batch-size`    | int   | 256                                  | -                    | Number of samples per training batch     |
+| `--lr`            | float | 0.001                                | -                    | Initial learning rate                    |
+| `--data-path`     | str   | './datasets'                         | -                    | Root path of training dataset            |
+| `--weights`       | str   | "" (empty string)                    | -                    | Path to pretrained weights               |
+| `--checkpoint`    | str   | "./experiments/best_val_checkpoint/" | -                    | Path to save model checkpoints           |
+| `--freeze-layers` | flag  | False                                | -                    | Whether to freeze partial network layers |
+| `--device`        | str   | 'cuda'                               | ['cuda', 'cpu']      | Training device selection                |
 
 ## 🔍 Inference (ONNX Runtime)
 
@@ -111,19 +141,20 @@ python train.py \
 python test.py
 ```
 
-> 💡 ​​Prerequisite​​: Install ONNX Runtime
+> 💡 Prerequisite: Install ONNX Runtime
+
 ```bash
 pip install onnxruntime
 ```
 
 📥 Download ONNX Model：[link](https://pan.baidu.com/s/128r532vfGq4XkxrJoaKb3w?pwd=59u8)
 
-
 ## 💾 Checkpoints
 
 best_val_checkpoint 下载：[link](https://pan.baidu.com/s/1SPgGAD6snK1vWuFlD3EZXA?pwd=tmdp)
 
 🏷️ Checkpoint Structure
+
 ```python
 checkpoint = {
     'epoch': epoch,
@@ -136,16 +167,18 @@ checkpoint = {
 ```
 
 ### Checkpoint Structure Explanation:
-| Key | Description |
-|-----|-------------|
-| `epoch` | Current training epoch number |
-| `model_state_dict` | Model's parameter dictionary |
-| `optimizer_state_dict` | Optimizer's state dictionary |
-| `scheduler_state_dict` | Learning rate scheduler's state |
-| `best_metric` | Best validation accuracy achieved |
-| `model_name` | Name/identifier of the model |
+
+| Key                      | Description                       |
+| ------------------------ | --------------------------------- |
+| `epoch`                | Current training epoch number     |
+| `model_state_dict`     | Model's parameter dictionary      |
+| `optimizer_state_dict` | Optimizer's state dictionary      |
+| `scheduler_state_dict` | Learning rate scheduler's state   |
+| `best_metric`          | Best validation accuracy achieved |
+| `model_name`           | Name/identifier of the model      |
 
 ### 💻 Usage Example
+
 ```python
 # Save checkpoint
 torch.save(checkpoint, 'model_checkpoint.pth')
@@ -171,14 +204,11 @@ optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     </div>
 </div>
 
-
 ### 🙏 Acknowledgments
 
 We would like to express our gratitude to the following projects and resources :
 
 - [AncientGlyphNet](https://github.com/youngbbi/AncientGlyphNet) : an advanced deep learning framework for detecting ancient Chinese characters in complex scene.
-
-
 
 ## 📜 Citation
 
@@ -197,4 +227,4 @@ If you find this work useful, please consider citing:
 }
 ```
 
-<div align="center" style="margin-top: 40px;"> <p style="color: #666; font-size: 1.1em; font-style: italic;"> <i class="fas fa-monument" style="color: #8B4513;"></i> Preserving Cultural Heritage Through AI <i class="fas fa-robot" style="color: #4B9CD3;"></i> </p> </div> 
+<div align="center" style="margin-top: 40px;"> <p style="color: #666; font-size: 1.1em; font-style: italic;"> <i class="fas fa-monument" style="color: #8B4513;"></i> Preserving Cultural Heritage Through AI <i class="fas fa-robot" style="color: #4B9CD3;"></i> </p> </div>

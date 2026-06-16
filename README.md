@@ -147,11 +147,11 @@ python test.py
 pip install onnxruntime
 ```
 
-📥 Download ONNX Model：[link](https://pan.baidu.com/s/128r532vfGq4XkxrJoaKb3w?pwd=59u8)
+📥 Download ONNX Model：[link](https://pan.baidu.com/s/1ax6_5mYPGRsO2mvgc20AsQ?pwd=5npy)
 
 ## 💾 Checkpoints
 
-best_val_checkpoint 下载：[link](https://pan.baidu.com/s/1SPgGAD6snK1vWuFlD3EZXA?pwd=tmdp)
+best_val_checkpoint 下载：[link](https://pan.baidu.com/s/1jsIReyLQoM-FaHuzuuWWpw?pwd=ukxb)
 
 🏷️ Checkpoint Structure
 
